@@ -1,0 +1,63 @@
+OpenCV version: 4.10.0
+Loading AlexNet...
+
+===== OpenCV getFLOPS() =====
+getflops layer=conv1 type=Convolution flops=211120800
+getflops layer=relu1 type=ReLU flops=290400
+getflops layer=norm1 type=LRN flops=1739375
+getflops layer=pool1 type=Pooling flops=629856
+getflops layer=conv2 type=Convolution flops=895981824
+getflops layer=relu2 type=ReLU flops=186624
+getflops layer=norm2 type=LRN flops=1119015
+getflops layer=pool2 type=Pooling flops=389376
+getflops layer=conv3 type=Convolution flops=299105664
+getflops layer=relu3 type=ReLU flops=64896
+getflops layer=conv4 type=Convolution flops=448626048
+getflops layer=relu4 type=ReLU flops=64896
+getflops layer=conv5 type=Convolution flops=299084032
+getflops layer=relu5 type=ReLU flops=43264
+getflops layer=pool5 type=Pooling flops=82944
+getflops layer=fc6 type=InnerProduct flops=113246208
+getflops layer=relu6 type=ReLU flops=4096
+getflops layer=drop6 type=Dropout flops=0
+getflops layer=fc7 type=InnerProduct flops=50331648
+getflops layer=relu7 type=ReLU flops=4096
+getflops layer=drop7 type=Dropout flops=0
+getflops layer=fc8 type=InnerProduct flops=12288000
+getflops layer=prob type=Softmax flops=4000
+getflops_layer_total=2334407062
+getflops_network_total=2334407062
+=============================
+
+Input shape: [1, 3, 227, 227]
+
+===== Manual literal counter =====
+layer=conv1 type=Convolution manual flops=211120800
+layer=relu1 type=ReLU manual flops=0
+layer=norm1 type=LRN manual flops=0
+layer=pool1 type=Pooling manual flops=0
+layer=conv2 type=Convolution manual flops=457875456
+layer=relu2 type=ReLU manual flops=0
+layer=norm2 type=LRN manual flops=0
+layer=pool2 type=Pooling manual flops=0
+layer=conv3 type=Convolution manual flops=299559936
+layer=relu3 type=ReLU manual flops=0
+layer=conv4 type=Convolution manual flops=224669952
+layer=relu4 type=ReLU manual flops=0
+layer=conv5 type=Convolution manual flops=149779968
+layer=relu5 type=ReLU manual flops=0
+layer=pool5 type=Pooling manual flops=0
+layer=fc6 type=InnerProduct manual flops=75497472
+layer=relu6 type=ReLU manual flops=0
+layer=drop6 type=Dropout manual flops=0
+layer=fc7 type=InnerProduct manual flops=33554432
+layer=relu7 type=ReLU manual flops=0
+layer=drop7 type=Dropout manual flops=0
+layer=fc8 type=InnerProduct manual flops=8192000
+layer=prob type=Softmax manual flops=18000
+==================================
+
+Forward pass completed.
+Output shape: [1, 1000]
+Output minimum: 0.000157439
+Output maximum: 0.00682822

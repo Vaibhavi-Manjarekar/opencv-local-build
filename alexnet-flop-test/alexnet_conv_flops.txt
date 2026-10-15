@@ -1,0 +1,15 @@
+Layer             getFLOPS            Manual       SDE profile        Manual-SDE
+--------------------------------------------------------------------------------
+conv1          211,120,800       211,120,800       211,417,248          -296,448
+conv2          895,981,824       457,875,456       458,077,952          -202,496
+conv3          299,105,664       299,559,936       299,635,584           -75,648
+conv4          448,626,048       224,669,952       224,742,912           -72,960
+conv5          299,084,032       149,779,968       149,828,608           -48,640
+--------------------------------------------------------------------------------
+TOTAL        2,153,918,368     1,343,006,112     1,343,702,304          -696,192
+
+Notes:
+- getFLOPS is OpenCV's static estimator.
+- Manual is the literal source counter.
+- SDE is the dynamic instruction-derived count inside the layer ROI.
+- Grouped convolutions may be overcounted by unpatched getFLOPS.

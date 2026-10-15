@@ -1,0 +1,80 @@
+342488-    data: 0.0769941434
+342489-    data: 0.13737835
+342490-    data: 0.049131956
+342491-    data: 0.0624958836
+342492-    data: 0.0801711306
+342493-    data: 0.102170676
+342494-  }
+342495-  blobs_lr: 1
+342496-  blobs_lr: 2
+342497-  weight_decay: 1
+342498-  weight_decay: 0
+342499-  convolution_param {
+342500-    num_output: 256
+342501-    pad: 2
+342502-    kernel_size: 5
+342503:    group: 2
+342504-    weight_filler {
+342505-      type: "gaussian"
+342506-      std: 0.01
+342507-    }
+342508-    bias_filler {
+342509-      type: "constant"
+342510-      value: 0.1
+342511-    }
+342512-  }
+342513-}
+--
+1891649-    data: 0.1064317
+1891650-    data: 0.173689932
+1891651-    data: 0.11127755
+1891652-    data: 0.177428439
+1891653-    data: 0.0012587267
+1891654-    data: 0.0917013213
+1891655-  }
+1891656-  blobs_lr: 1
+1891657-  blobs_lr: 2
+1891658-  weight_decay: 1
+1891659-  weight_decay: 0
+1891660-  convolution_param {
+1891661-    num_output: 384
+1891662-    pad: 1
+1891663-    kernel_size: 3
+1891664:    group: 2
+1891665-    weight_filler {
+1891666-      type: "gaussian"
+1891667-      std: 0.01
+1891668-    }
+1891669-    bias_filler {
+1891670-      type: "constant"
+1891671-      value: 0.1
+1891672-    }
+1891673-  }
+1891674-}
+--
+2334315-    data: 0.59261167
+2334316-    data: 0.14252539
+2334317-    data: 0.0402403735
+2334318-    data: 0.426605344
+2334319-    data: 0.0154572278
+2334320-    data: 0.100741103
+2334321-  }
+2334322-  blobs_lr: 1
+2334323-  blobs_lr: 2
+2334324-  weight_decay: 1
+2334325-  weight_decay: 0
+2334326-  convolution_param {
+2334327-    num_output: 256
+2334328-    pad: 1
+2334329-    kernel_size: 3
+2334330:    group: 2
+2334331-    weight_filler {
+2334332-      type: "gaussian"
+2334333-      std: 0.01
+2334334-    }
+2334335-    bias_filler {
+2334336-      type: "constant"
+2334337-      value: 0.1
+2334338-    }
+2334339-  }
+2334340-}

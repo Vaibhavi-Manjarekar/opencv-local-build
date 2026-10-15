@@ -1,0 +1,116 @@
+diff --git a/modules/dnn/src/layers/cpu_kernels/convolution.cpp b/modules/dnn/src/layers/cpu_kernels/convolution.cpp
+index 33fb62a..694ea06 100644
+--- a/modules/dnn/src/layers/cpu_kernels/convolution.cpp
++++ b/modules/dnn/src/layers/cpu_kernels/convolution.cpp
+@@ -11,6 +11,8 @@
+ 
+ #include "../../precomp.hpp"
+ #include "convolution.hpp"
++#include "../../flop_counter.hpp"
++
+ 
+ #include "conv_block.simd.hpp"
+ #include "layers/cpu_kernels/conv_block.simd_declarations.hpp" // defines CV_CPU_DISPATCH_MODES_ALL=AVX2,...,BASELINE based on CMakeLists.txt content
+@@ -1098,6 +1100,11 @@ static inline void packInputData(char* inpbuf_task, float* inp, const int* ofsta
+ void runFastConv(InputArray _input, OutputArray _output, const Ptr<FastConv>& conv, int ntasks,
+                    const Ptr<ActivationLayer>& actLayer, const std::vector<float>& reluslope, bool fusedAdd)
+ {
++
++
++
++
++
+     Mat input = _input.getMat();
+     Mat output = _output.getMat();
+     int conv_dim = conv->conv_dim;
+diff --git a/modules/dnn/src/layers/fully_connected_layer.cpp b/modules/dnn/src/layers/fully_connected_layer.cpp
+index 4ff6fc7..87311fa 100644
+--- a/modules/dnn/src/layers/fully_connected_layer.cpp
++++ b/modules/dnn/src/layers/fully_connected_layer.cpp
+@@ -49,6 +49,8 @@
+ #include "../op_webnn.hpp"
+ #include "../op_cann.hpp"
+ #include "../op_vkcom.hpp"
++#include "../flop_counter.hpp"
++
+ 
+ #include <opencv2/dnn/shape_utils.hpp>
+ 
+@@ -263,19 +265,25 @@ public:
+                 memcpy(sptr, sptr_, vecsize*sizeof(sptr[0]));
+ 
+             #if CV_TRY_AVX512_SKX
+-                if( useAVX512 )
++                if( useAVX512 ){
++
+                     opt_AVX512_SKX::fastGEMM1T( sptr, wptr, wstep, biasptr, dptr, nw, vecsize_aligned);
+-                else
++                    
+             #endif
+             #if CV_TRY_AVX2
+-                if( useAVX2 )
++                if( useAVX2 ){
++                
++
+                     opt_AVX2::fastGEMM1T( sptr, wptr, wstep, biasptr, dptr, nw, vecsize_aligned);
+-                else
++                    
++        }else
+             #endif
+             #if CV_TRY_AVX
+-                if( useAVX )
++                if( useAVX ){
++
+                     opt_AVX::fastGEMM1T( sptr, wptr, wstep, biasptr, dptr, nw, vecsize_aligned);
+-                else
++                    
++    }else
+             #endif
+             #if CV_TRY_RVV
+                 if( useRVV )
+@@ -312,7 +320,6 @@ public:
+                         v_store(dptr + i, s);
+                     }
+             #endif
+-
+                     for( ; i < nw; i++, wptr += wstep )
+                     {
+                         float s0=biasptr[i];
+@@ -480,7 +487,7 @@ public:
+                 srcMat_fp32 = srcMat;
+                 dstMat_fp32 = dstMat;
+             }
+-
++            
+             cv::gemm(srcMat_fp32, weights, 1, noArray(), 0, dstMat_fp32, GEMM_2_T);
+ 
+             if (bias)
+diff --git a/modules/dnn/src/net_impl.cpp b/modules/dnn/src/net_impl.cpp
+index 28db8c0..63bf6fc 100644
+--- a/modules/dnn/src/net_impl.cpp
++++ b/modules/dnn/src/net_impl.cpp
+@@ -6,6 +6,8 @@
+ 
+ #include "net_impl.hpp"
+ 
++#include "flop_counter.hpp"
++
+ namespace cv {
+ namespace dnn {
+ CV__DNN_INLINE_NS_BEGIN
+@@ -728,8 +730,15 @@ void Net::Impl::forwardLayer(LayerData& ld)
+                 {
+                     inps[i] = *ld.inputBlobs[i];
+                 }
++                flop_counter_start();
+                 layer->forward(inps, ld.outputBlobs, ld.internals);
+ 
++                const std::uint64_t layerFlops = flop_counter_stop();
++
++                std::cout << "layer=" << ld.name
++                        << " type=" << layer->type
++                        << " flops=" << layerFlops
++                        << '\n';
+                 if (getParam_DNN_CHECK_NAN_INF())
+                 {
+                     bool fail = false;

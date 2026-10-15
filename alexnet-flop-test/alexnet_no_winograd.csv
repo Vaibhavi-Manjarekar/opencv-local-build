@@ -1,0 +1,63 @@
+OpenCV version: 4.10.0
+Loading AlexNet...
+
+===== OpenCV getFLOPS() =====
+getflops layer=conv1 type=Convolution flops=211120800
+getflops layer=relu1 type=ReLU flops=290400
+getflops layer=norm1 type=LRN flops=1739375
+getflops layer=pool1 type=Pooling flops=629856
+getflops layer=conv2 type=Convolution flops=895981824
+getflops layer=relu2 type=ReLU flops=186624
+getflops layer=norm2 type=LRN flops=1119015
+getflops layer=pool2 type=Pooling flops=389376
+getflops layer=conv3 type=Convolution flops=299105664
+getflops layer=relu3 type=ReLU flops=64896
+getflops layer=conv4 type=Convolution flops=448626048
+getflops layer=relu4 type=ReLU flops=64896
+getflops layer=conv5 type=Convolution flops=299084032
+getflops layer=relu5 type=ReLU flops=43264
+getflops layer=pool5 type=Pooling flops=82944
+getflops layer=fc6 type=InnerProduct flops=113246208
+getflops layer=relu6 type=ReLU flops=4096
+getflops layer=drop6 type=Dropout flops=0
+getflops layer=fc7 type=InnerProduct flops=50331648
+getflops layer=relu7 type=ReLU flops=4096
+getflops layer=drop7 type=Dropout flops=0
+getflops layer=fc8 type=InnerProduct flops=12288000
+getflops layer=prob type=Softmax flops=4000
+getflops_layer_total=2334407062
+getflops_network_total=2334407062
+=============================
+
+Input shape: [1, 3, 227, 227]
+
+===== Manual literal counter =====
+manual layer=conv1 type=Convolution flops=210760704
+manual layer=relu1 type=ReLU flops=0
+manual layer=norm1 type=LRN flops=0
+manual layer=pool1 type=Pooling flops=0
+manual layer=conv2 type=Convolution flops=457113600
+manual layer=relu2 type=ReLU flops=0
+manual layer=norm2 type=LRN flops=0
+manual layer=pool2 type=Pooling flops=0
+manual layer=conv3 type=Convolution flops=297271296
+manual layer=relu3 type=ReLU flops=0
+manual layer=conv4 type=Convolution flops=222953472
+manual layer=relu4 type=ReLU flops=0
+manual layer=conv5 type=Convolution flops=148635648
+manual layer=relu5 type=ReLU flops=0
+manual layer=pool5 type=Pooling flops=0
+manual layer=fc6 type=InnerProduct flops=75497472
+manual layer=relu6 type=ReLU flops=0
+manual layer=drop6 type=Dropout flops=0
+manual layer=fc7 type=InnerProduct flops=33554432
+manual layer=relu7 type=ReLU flops=0
+manual layer=drop7 type=Dropout flops=0
+manual layer=fc8 type=InnerProduct flops=8192000
+manual layer=prob type=Softmax flops=18000
+==================================
+
+Forward pass completed.
+Output shape: [1, 1000]
+Output minimum: 0.000157439
+Output maximum: 0.00682822

@@ -1,0 +1,12 @@
+  name: "conv2"
+  type: CONVOLUTION
+    group: 2
+
+  name: "conv4"
+  type: CONVOLUTION
+    group: 2
+
+  name: "conv5"
+  type: CONVOLUTION
+    group: 2
+

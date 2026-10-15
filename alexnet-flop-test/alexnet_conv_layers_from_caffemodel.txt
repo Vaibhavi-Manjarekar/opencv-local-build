@@ -1,0 +1,40 @@
+layer: conv1
+type: CONVOLUTION
+num_output: 96
+kernel_size: 11
+pad: 0
+stride: 4
+group: 1
+
+layer: conv2
+type: CONVOLUTION
+num_output: 256
+kernel_size: 5
+pad: 2
+stride: 1
+group: 2
+
+layer: conv3
+type: CONVOLUTION
+num_output: 384
+kernel_size: 3
+pad: 1
+stride: 1
+group: 1
+
+layer: conv4
+type: CONVOLUTION
+num_output: 384
+kernel_size: 3
+pad: 1
+stride: 1
+group: 2
+
+layer: conv5
+type: CONVOLUTION
+num_output: 256
+kernel_size: 3
+pad: 1
+stride: 1
+group: 2
+

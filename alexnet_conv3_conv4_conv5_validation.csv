@@ -1,0 +1,4 @@
+layer,input_shape,runtime_output_shape,trained_weight_shape,Cin,Cout,groups,Cin_per_group,K_h,K_w,output_elements,dot_product_length,weight_values,bias_values,multiplications,accumulation_additions,bias_additions,total_additions,MACCs,FLOPs_2_per_MACC,exact_mul_add_operations
+conv3,"(1, 256, 13, 13)","(1, 384, 13, 13)","(384, 256, 3, 3)",256,384,1,256,3,3,64896,2304,884736,384,149520384,149455488,64896,149520384,149520384,299040768,299040768
+conv4,"(1, 384, 13, 13)","(1, 384, 13, 13)","(384, 192, 3, 3)",384,384,2,192,3,3,64896,1728,663552,384,112140288,112075392,64896,112140288,112140288,224280576,224280576
+conv5,"(1, 384, 13, 13)","(1, 256, 13, 13)","(256, 192, 3, 3)",384,256,2,192,3,3,43264,1728,442368,256,74760192,74716928,43264,74760192,74760192,149520384,149520384

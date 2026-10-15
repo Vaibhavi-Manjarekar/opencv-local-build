@@ -1,0 +1,1394 @@
+00000000002096e0 <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]>:
+cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]:
+  2096e0:	41 57                	push   %r15
+  2096e2:	4c 63 ff             	movslq %edi,%r15
+  2096e5:	41 56                	push   %r14
+  2096e7:	45 89 c6             	mov    %r8d,%r14d
+  2096ea:	41 55                	push   %r13
+  2096ec:	41 54                	push   %r12
+  2096ee:	55                   	push   %rbp
+  2096ef:	44 89 cd             	mov    %r9d,%ebp
+  2096f2:	53                   	push   %rbx
+  2096f3:	48 89 cb             	mov    %rcx,%rbx
+  2096f6:	48 81 ec 48 02 00 00 	sub    $0x248,%rsp
+  2096fd:	45 85 ff             	test   %r15d,%r15d
+  209700:	0f 8e 92 0b 00 00    	jle    20a298 <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]+0xbb8>
+  209706:	49 89 d4             	mov    %rdx,%r12
+  209709:	49 89 f5             	mov    %rsi,%r13
+  20970c:	48 8d 3d 8d 24 4f 00 	lea    0x4f248d(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  209713:	e8 d8 2b e9 ff       	call   9c2f0 <__tls_get_addr@plt>
+  209718:	80 b8 40 00 00 00 00 	cmpb   $0x0,0x40(%rax)
+  20971f:	48 8b 90 48 00 00 00 	mov    0x48(%rax),%rdx
+  209726:	0f 85 84 02 00 00    	jne    2099b0 <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]+0x2d0>
+  20972c:	66 0f ef f6          	pxor   %xmm6,%xmm6
+  209730:	49 c1 e7 04          	shl    $0x4,%r15
+  209734:	4b 8d 44 3d 00       	lea    0x0(%r13,%r15,1),%rax
+  209739:	0f 28 fe             	movaps %xmm6,%xmm7
+  20973c:	44 0f 28 c6          	movaps %xmm6,%xmm8
+  209740:	0f 29 34 24          	movaps %xmm6,(%rsp)
+  209744:	0f 29 74 24 20       	movaps %xmm6,0x20(%rsp)
+  209749:	44 0f 28 ce          	movaps %xmm6,%xmm9
+  20974d:	44 0f 28 d6          	movaps %xmm6,%xmm10
+  209751:	44 0f 28 de          	movaps %xmm6,%xmm11
+  209755:	0f 29 74 24 10       	movaps %xmm6,0x10(%rsp)
+  20975a:	44 0f 28 f6          	movaps %xmm6,%xmm14
+  20975e:	0f 29 b4 24 90 00 00 	movaps %xmm6,0x90(%rsp)
+  209765:	00 
+  209766:	0f 29 b4 24 80 00 00 	movaps %xmm6,0x80(%rsp)
+  20976d:	00 
+  20976e:	0f 29 74 24 70       	movaps %xmm6,0x70(%rsp)
+  209773:	0f 29 74 24 60       	movaps %xmm6,0x60(%rsp)
+  209778:	0f 29 74 24 50       	movaps %xmm6,0x50(%rsp)
+  20977d:	0f 29 74 24 40       	movaps %xmm6,0x40(%rsp)
+  209782:	0f 29 74 24 30       	movaps %xmm6,0x30(%rsp)
+  209787:	0f 29 b4 24 00 01 00 	movaps %xmm6,0x100(%rsp)
+  20978e:	00 
+  20978f:	0f 29 b4 24 f0 00 00 	movaps %xmm6,0xf0(%rsp)
+  209796:	00 
+  209797:	0f 29 b4 24 e0 00 00 	movaps %xmm6,0xe0(%rsp)
+  20979e:	00 
+  20979f:	0f 29 b4 24 d0 00 00 	movaps %xmm6,0xd0(%rsp)
+  2097a6:	00 
+  2097a7:	0f 29 b4 24 c0 00 00 	movaps %xmm6,0xc0(%rsp)
+  2097ae:	00 
+  2097af:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+  2097b6:	00 
+  2097b7:	0f 29 b4 24 a0 00 00 	movaps %xmm6,0xa0(%rsp)
+  2097be:	00 
+  2097bf:	90                   	nop
+  2097c0:	41 0f 10 45 00       	movups 0x0(%r13),%xmm0
+  2097c5:	45 0f 10 2c 24       	movups (%r12),%xmm13
+  2097ca:	49 83 c5 10          	add    $0x10,%r13
+  2097ce:	49 83 c4 60          	add    $0x60,%r12
+  2097d2:	45 0f 10 64 24 b0    	movups -0x50(%r12),%xmm12
+  2097d8:	41 0f 10 6c 24 c0    	movups -0x40(%r12),%xmm5
+  2097de:	0f 28 c8             	movaps %xmm0,%xmm1
+  2097e1:	41 0f 28 d5          	movaps %xmm13,%xmm2
+  2097e5:	41 0f 10 64 24 d0    	movups -0x30(%r12),%xmm4
+  2097eb:	41 0f 10 5c 24 e0    	movups -0x20(%r12),%xmm3
+  2097f1:	0f c6 c8 00          	shufps $0x0,%xmm0,%xmm1
+  2097f5:	0f 59 d1             	mulps  %xmm1,%xmm2
+  2097f8:	45 0f 28 fd          	movaps %xmm13,%xmm15
+  2097fc:	44 0f 58 f2          	addps  %xmm2,%xmm14
+  209800:	41 0f 28 d4          	movaps %xmm12,%xmm2
+  209804:	0f 59 d1             	mulps  %xmm1,%xmm2
+  209807:	0f 58 94 24 a0 00 00 	addps  0xa0(%rsp),%xmm2
+  20980e:	00 
+  20980f:	0f 29 94 24 a0 00 00 	movaps %xmm2,0xa0(%rsp)
+  209816:	00 
+  209817:	0f 28 d5             	movaps %xmm5,%xmm2
+  20981a:	0f 59 d1             	mulps  %xmm1,%xmm2
+  20981d:	0f 58 94 24 b0 00 00 	addps  0xb0(%rsp),%xmm2
+  209824:	00 
+  209825:	0f 29 94 24 b0 00 00 	movaps %xmm2,0xb0(%rsp)
+  20982c:	00 
+  20982d:	0f 28 d4             	movaps %xmm4,%xmm2
+  209830:	0f 59 d1             	mulps  %xmm1,%xmm2
+  209833:	0f 58 94 24 c0 00 00 	addps  0xc0(%rsp),%xmm2
+  20983a:	00 
+  20983b:	0f 29 94 24 c0 00 00 	movaps %xmm2,0xc0(%rsp)
+  209842:	00 
+  209843:	0f 28 d3             	movaps %xmm3,%xmm2
+  209846:	0f 59 d1             	mulps  %xmm1,%xmm2
+  209849:	0f 58 94 24 d0 00 00 	addps  0xd0(%rsp),%xmm2
+  209850:	00 
+  209851:	0f 29 94 24 d0 00 00 	movaps %xmm2,0xd0(%rsp)
+  209858:	00 
+  209859:	41 0f 10 54 24 f0    	movups -0x10(%r12),%xmm2
+  20985f:	0f 59 ca             	mulps  %xmm2,%xmm1
+  209862:	0f 58 8c 24 e0 00 00 	addps  0xe0(%rsp),%xmm1
+  209869:	00 
+  20986a:	0f 29 8c 24 e0 00 00 	movaps %xmm1,0xe0(%rsp)
+  209871:	00 
+  209872:	0f 28 c8             	movaps %xmm0,%xmm1
+  209875:	0f c6 c8 55          	shufps $0x55,%xmm0,%xmm1
+  209879:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  20987d:	44 0f 58 bc 24 f0 00 	addps  0xf0(%rsp),%xmm15
+  209884:	00 00 
+  209886:	44 0f 29 bc 24 f0 00 	movaps %xmm15,0xf0(%rsp)
+  20988d:	00 00 
+  20988f:	45 0f 28 fc          	movaps %xmm12,%xmm15
+  209893:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209897:	44 0f 58 bc 24 00 01 	addps  0x100(%rsp),%xmm15
+  20989e:	00 00 
+  2098a0:	44 0f 29 bc 24 00 01 	movaps %xmm15,0x100(%rsp)
+  2098a7:	00 00 
+  2098a9:	44 0f 28 fd          	movaps %xmm5,%xmm15
+  2098ad:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  2098b1:	44 0f 58 7c 24 30    	addps  0x30(%rsp),%xmm15
+  2098b7:	44 0f 29 7c 24 30    	movaps %xmm15,0x30(%rsp)
+  2098bd:	44 0f 28 fc          	movaps %xmm4,%xmm15
+  2098c1:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  2098c5:	44 0f 58 7c 24 40    	addps  0x40(%rsp),%xmm15
+  2098cb:	44 0f 29 7c 24 40    	movaps %xmm15,0x40(%rsp)
+  2098d1:	44 0f 28 fb          	movaps %xmm3,%xmm15
+  2098d5:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  2098d9:	0f 59 ca             	mulps  %xmm2,%xmm1
+  2098dc:	44 0f 58 7c 24 50    	addps  0x50(%rsp),%xmm15
+  2098e2:	0f 58 4c 24 60       	addps  0x60(%rsp),%xmm1
+  2098e7:	44 0f 29 7c 24 50    	movaps %xmm15,0x50(%rsp)
+  2098ed:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+  2098f2:	0f 28 c8             	movaps %xmm0,%xmm1
+  2098f5:	0f c6 c8 aa          	shufps $0xaa,%xmm0,%xmm1
+  2098f9:	44 0f 28 f9          	movaps %xmm1,%xmm15
+  2098fd:	0f c6 c0 ff          	shufps $0xff,%xmm0,%xmm0
+  209901:	45 0f 59 fd          	mulps  %xmm13,%xmm15
+  209905:	44 0f 58 7c 24 70    	addps  0x70(%rsp),%xmm15
+  20990b:	44 0f 59 e8          	mulps  %xmm0,%xmm13
+  20990f:	44 0f 29 7c 24 70    	movaps %xmm15,0x70(%rsp)
+  209915:	44 0f 28 f9          	movaps %xmm1,%xmm15
+  209919:	45 0f 59 fc          	mulps  %xmm12,%xmm15
+  20991d:	44 0f 58 bc 24 80 00 	addps  0x80(%rsp),%xmm15
+  209924:	00 00 
+  209926:	44 0f 59 e0          	mulps  %xmm0,%xmm12
+  20992a:	45 0f 58 cd          	addps  %xmm13,%xmm9
+  20992e:	44 0f 29 bc 24 80 00 	movaps %xmm15,0x80(%rsp)
+  209935:	00 00 
+  209937:	44 0f 28 fd          	movaps %xmm5,%xmm15
+  20993b:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  20993f:	44 0f 58 bc 24 90 00 	addps  0x90(%rsp),%xmm15
+  209946:	00 00 
+  209948:	0f 59 e8             	mulps  %xmm0,%xmm5
+  20994b:	45 0f 58 c4          	addps  %xmm12,%xmm8
+  20994f:	0f 58 6c 24 10       	addps  0x10(%rsp),%xmm5
+  209954:	44 0f 29 bc 24 90 00 	movaps %xmm15,0x90(%rsp)
+  20995b:	00 00 
+  20995d:	44 0f 28 fc          	movaps %xmm4,%xmm15
+  209961:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209965:	0f 29 6c 24 10       	movaps %xmm5,0x10(%rsp)
+  20996a:	0f 59 e0             	mulps  %xmm0,%xmm4
+  20996d:	45 0f 58 df          	addps  %xmm15,%xmm11
+  209971:	44 0f 28 fb          	movaps %xmm3,%xmm15
+  209975:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209979:	0f 58 fc             	addps  %xmm4,%xmm7
+  20997c:	0f 59 ca             	mulps  %xmm2,%xmm1
+  20997f:	0f 59 d0             	mulps  %xmm0,%xmm2
+  209982:	0f 58 0c 24          	addps  (%rsp),%xmm1
+  209986:	0f 59 d8             	mulps  %xmm0,%xmm3
+  209989:	0f 58 5c 24 20       	addps  0x20(%rsp),%xmm3
+  20998e:	45 0f 58 d7          	addps  %xmm15,%xmm10
+  209992:	0f 29 0c 24          	movaps %xmm1,(%rsp)
+  209996:	0f 58 f2             	addps  %xmm2,%xmm6
+  209999:	0f 29 5c 24 20       	movaps %xmm3,0x20(%rsp)
+  20999e:	49 39 c5             	cmp    %rax,%r13
+  2099a1:	0f 85 19 fe ff ff    	jne    2097c0 <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]+0xe0>
+  2099a7:	41 0f 28 ee          	movaps %xmm14,%xmm5
+  2099ab:	e9 24 03 00 00       	jmp    209cd4 <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]+0x5f4>
+  2099b0:	49 63 c7             	movslq %r15d,%rax
+  2099b3:	66 0f ef f6          	pxor   %xmm6,%xmm6
+  2099b7:	48 c1 e0 04          	shl    $0x4,%rax
+  2099bb:	0f 28 fe             	movaps %xmm6,%xmm7
+  2099be:	0f 29 74 24 20       	movaps %xmm6,0x20(%rsp)
+  2099c3:	44 0f 28 c6          	movaps %xmm6,%xmm8
+  2099c7:	4c 01 e8             	add    %r13,%rax
+  2099ca:	0f 29 74 24 10       	movaps %xmm6,0x10(%rsp)
+  2099cf:	44 0f 28 ce          	movaps %xmm6,%xmm9
+  2099d3:	44 0f 28 d6          	movaps %xmm6,%xmm10
+  2099d7:	0f 29 34 24          	movaps %xmm6,(%rsp)
+  2099db:	44 0f 28 de          	movaps %xmm6,%xmm11
+  2099df:	44 0f 28 f6          	movaps %xmm6,%xmm14
+  2099e3:	0f 29 b4 24 90 00 00 	movaps %xmm6,0x90(%rsp)
+  2099ea:	00 
+  2099eb:	0f 29 b4 24 80 00 00 	movaps %xmm6,0x80(%rsp)
+  2099f2:	00 
+  2099f3:	0f 29 74 24 70       	movaps %xmm6,0x70(%rsp)
+  2099f8:	0f 29 74 24 60       	movaps %xmm6,0x60(%rsp)
+  2099fd:	0f 29 74 24 50       	movaps %xmm6,0x50(%rsp)
+  209a02:	0f 29 74 24 40       	movaps %xmm6,0x40(%rsp)
+  209a07:	0f 29 74 24 30       	movaps %xmm6,0x30(%rsp)
+  209a0c:	0f 29 b4 24 00 01 00 	movaps %xmm6,0x100(%rsp)
+  209a13:	00 
+  209a14:	0f 29 b4 24 f0 00 00 	movaps %xmm6,0xf0(%rsp)
+  209a1b:	00 
+  209a1c:	0f 29 b4 24 e0 00 00 	movaps %xmm6,0xe0(%rsp)
+  209a23:	00 
+  209a24:	0f 29 b4 24 d0 00 00 	movaps %xmm6,0xd0(%rsp)
+  209a2b:	00 
+  209a2c:	0f 29 b4 24 c0 00 00 	movaps %xmm6,0xc0(%rsp)
+  209a33:	00 
+  209a34:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+  209a3b:	00 
+  209a3c:	0f 29 b4 24 a0 00 00 	movaps %xmm6,0xa0(%rsp)
+  209a43:	00 
+  209a44:	0f 1f 40 00          	nopl   0x0(%rax)
+  209a48:	41 0f 10 45 00       	movups 0x0(%r13),%xmm0
+  209a4d:	45 0f 10 2c 24       	movups (%r12),%xmm13
+  209a52:	49 83 c5 10          	add    $0x10,%r13
+  209a56:	49 83 c4 60          	add    $0x60,%r12
+  209a5a:	45 0f 10 64 24 b0    	movups -0x50(%r12),%xmm12
+  209a60:	41 0f 10 6c 24 c0    	movups -0x40(%r12),%xmm5
+  209a66:	0f 28 c8             	movaps %xmm0,%xmm1
+  209a69:	41 0f 28 d5          	movaps %xmm13,%xmm2
+  209a6d:	41 0f 10 64 24 d0    	movups -0x30(%r12),%xmm4
+  209a73:	41 0f 10 5c 24 e0    	movups -0x20(%r12),%xmm3
+  209a79:	0f c6 c8 00          	shufps $0x0,%xmm0,%xmm1
+  209a7d:	0f 59 d1             	mulps  %xmm1,%xmm2
+  209a80:	45 0f 28 fd          	movaps %xmm13,%xmm15
+  209a84:	44 0f 58 f2          	addps  %xmm2,%xmm14
+  209a88:	41 0f 28 d4          	movaps %xmm12,%xmm2
+  209a8c:	0f 59 d1             	mulps  %xmm1,%xmm2
+  209a8f:	0f 58 94 24 a0 00 00 	addps  0xa0(%rsp),%xmm2
+  209a96:	00 
+  209a97:	0f 29 94 24 a0 00 00 	movaps %xmm2,0xa0(%rsp)
+  209a9e:	00 
+  209a9f:	0f 28 d5             	movaps %xmm5,%xmm2
+  209aa2:	0f 59 d1             	mulps  %xmm1,%xmm2
+  209aa5:	0f 58 94 24 b0 00 00 	addps  0xb0(%rsp),%xmm2
+  209aac:	00 
+  209aad:	0f 29 94 24 b0 00 00 	movaps %xmm2,0xb0(%rsp)
+  209ab4:	00 
+  209ab5:	0f 28 d4             	movaps %xmm4,%xmm2
+  209ab8:	0f 59 d1             	mulps  %xmm1,%xmm2
+  209abb:	0f 58 94 24 c0 00 00 	addps  0xc0(%rsp),%xmm2
+  209ac2:	00 
+  209ac3:	0f 29 94 24 c0 00 00 	movaps %xmm2,0xc0(%rsp)
+  209aca:	00 
+  209acb:	0f 28 d3             	movaps %xmm3,%xmm2
+  209ace:	0f 59 d1             	mulps  %xmm1,%xmm2
+  209ad1:	0f 58 94 24 d0 00 00 	addps  0xd0(%rsp),%xmm2
+  209ad8:	00 
+  209ad9:	0f 29 94 24 d0 00 00 	movaps %xmm2,0xd0(%rsp)
+  209ae0:	00 
+  209ae1:	41 0f 10 54 24 f0    	movups -0x10(%r12),%xmm2
+  209ae7:	0f 59 ca             	mulps  %xmm2,%xmm1
+  209aea:	0f 58 8c 24 e0 00 00 	addps  0xe0(%rsp),%xmm1
+  209af1:	00 
+  209af2:	0f 29 8c 24 e0 00 00 	movaps %xmm1,0xe0(%rsp)
+  209af9:	00 
+  209afa:	0f 28 c8             	movaps %xmm0,%xmm1
+  209afd:	0f c6 c8 55          	shufps $0x55,%xmm0,%xmm1
+  209b01:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209b05:	44 0f 58 bc 24 f0 00 	addps  0xf0(%rsp),%xmm15
+  209b0c:	00 00 
+  209b0e:	44 0f 29 bc 24 f0 00 	movaps %xmm15,0xf0(%rsp)
+  209b15:	00 00 
+  209b17:	45 0f 28 fc          	movaps %xmm12,%xmm15
+  209b1b:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209b1f:	44 0f 58 bc 24 00 01 	addps  0x100(%rsp),%xmm15
+  209b26:	00 00 
+  209b28:	44 0f 29 bc 24 00 01 	movaps %xmm15,0x100(%rsp)
+  209b2f:	00 00 
+  209b31:	44 0f 28 fd          	movaps %xmm5,%xmm15
+  209b35:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209b39:	44 0f 58 7c 24 30    	addps  0x30(%rsp),%xmm15
+  209b3f:	44 0f 29 7c 24 30    	movaps %xmm15,0x30(%rsp)
+  209b45:	44 0f 28 fc          	movaps %xmm4,%xmm15
+  209b49:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209b4d:	44 0f 58 7c 24 40    	addps  0x40(%rsp),%xmm15
+  209b53:	44 0f 29 7c 24 40    	movaps %xmm15,0x40(%rsp)
+  209b59:	44 0f 28 fb          	movaps %xmm3,%xmm15
+  209b5d:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209b61:	0f 59 ca             	mulps  %xmm2,%xmm1
+  209b64:	44 0f 58 7c 24 50    	addps  0x50(%rsp),%xmm15
+  209b6a:	0f 58 4c 24 60       	addps  0x60(%rsp),%xmm1
+  209b6f:	44 0f 29 7c 24 50    	movaps %xmm15,0x50(%rsp)
+  209b75:	45 0f 28 fd          	movaps %xmm13,%xmm15
+  209b79:	0f 29 4c 24 60       	movaps %xmm1,0x60(%rsp)
+  209b7e:	0f 28 c8             	movaps %xmm0,%xmm1
+  209b81:	0f c6 c8 aa          	shufps $0xaa,%xmm0,%xmm1
+  209b85:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209b89:	0f c6 c0 ff          	shufps $0xff,%xmm0,%xmm0
+  209b8d:	44 0f 58 7c 24 70    	addps  0x70(%rsp),%xmm15
+  209b93:	44 0f 59 e8          	mulps  %xmm0,%xmm13
+  209b97:	44 0f 29 7c 24 70    	movaps %xmm15,0x70(%rsp)
+  209b9d:	45 0f 28 fc          	movaps %xmm12,%xmm15
+  209ba1:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209ba5:	44 0f 58 bc 24 80 00 	addps  0x80(%rsp),%xmm15
+  209bac:	00 00 
+  209bae:	44 0f 59 e0          	mulps  %xmm0,%xmm12
+  209bb2:	45 0f 58 cd          	addps  %xmm13,%xmm9
+  209bb6:	44 0f 29 bc 24 80 00 	movaps %xmm15,0x80(%rsp)
+  209bbd:	00 00 
+  209bbf:	44 0f 28 fd          	movaps %xmm5,%xmm15
+  209bc3:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209bc7:	44 0f 58 bc 24 90 00 	addps  0x90(%rsp),%xmm15
+  209bce:	00 00 
+  209bd0:	0f 59 e8             	mulps  %xmm0,%xmm5
+  209bd3:	45 0f 58 c4          	addps  %xmm12,%xmm8
+  209bd7:	0f 58 6c 24 10       	addps  0x10(%rsp),%xmm5
+  209bdc:	44 0f 29 bc 24 90 00 	movaps %xmm15,0x90(%rsp)
+  209be3:	00 00 
+  209be5:	44 0f 28 fc          	movaps %xmm4,%xmm15
+  209be9:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209bed:	0f 29 6c 24 10       	movaps %xmm5,0x10(%rsp)
+  209bf2:	0f 59 e0             	mulps  %xmm0,%xmm4
+  209bf5:	45 0f 58 df          	addps  %xmm15,%xmm11
+  209bf9:	44 0f 28 fb          	movaps %xmm3,%xmm15
+  209bfd:	44 0f 59 f9          	mulps  %xmm1,%xmm15
+  209c01:	0f 58 fc             	addps  %xmm4,%xmm7
+  209c04:	0f 59 ca             	mulps  %xmm2,%xmm1
+  209c07:	0f 59 d0             	mulps  %xmm0,%xmm2
+  209c0a:	0f 58 0c 24          	addps  (%rsp),%xmm1
+  209c0e:	0f 59 d8             	mulps  %xmm0,%xmm3
+  209c11:	0f 58 5c 24 20       	addps  0x20(%rsp),%xmm3
+  209c16:	45 0f 58 d7          	addps  %xmm15,%xmm10
+  209c1a:	0f 29 0c 24          	movaps %xmm1,(%rsp)
+  209c1e:	0f 58 f2             	addps  %xmm2,%xmm6
+  209c21:	0f 29 5c 24 20       	movaps %xmm3,0x20(%rsp)
+  209c26:	49 39 c5             	cmp    %rax,%r13
+  209c29:	0f 85 19 fe ff ff    	jne    209a48 <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]+0x368>
+  209c2f:	4c 8d a2 c0 00 00 00 	lea    0xc0(%rdx),%r12
+  209c36:	44 0f 29 84 24 70 01 	movaps %xmm8,0x170(%rsp)
+  209c3d:	00 00 
+  209c3f:	44 0f 29 8c 24 60 01 	movaps %xmm9,0x160(%rsp)
+  209c46:	00 00 
+  209c48:	44 0f 29 94 24 50 01 	movaps %xmm10,0x150(%rsp)
+  209c4f:	00 00 
+  209c51:	0f 29 bc 24 40 01 00 	movaps %xmm7,0x140(%rsp)
+  209c58:	00 
+  209c59:	0f 29 b4 24 30 01 00 	movaps %xmm6,0x130(%rsp)
+  209c60:	00 
+  209c61:	44 0f 29 9c 24 20 01 	movaps %xmm11,0x120(%rsp)
+  209c68:	00 00 
+  209c6a:	44 0f 29 b4 24 10 01 	movaps %xmm14,0x110(%rsp)
+  209c71:	00 00 
+  209c73:	48 8d 3d 26 1f 4f 00 	lea    0x4f1f26(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  209c7a:	e8 71 26 e9 ff       	call   9c2f0 <__tls_get_addr@plt>
+  209c7f:	0f 28 ac 24 10 01 00 	movaps 0x110(%rsp),%xmm5
+  209c86:	00 
+  209c87:	44 0f 28 9c 24 20 01 	movaps 0x120(%rsp),%xmm11
+  209c8e:	00 00 
+  209c90:	0f 28 b4 24 30 01 00 	movaps 0x130(%rsp),%xmm6
+  209c97:	00 
+  209c98:	0f 28 bc 24 40 01 00 	movaps 0x140(%rsp),%xmm7
+  209c9f:	00 
+  209ca0:	44 0f 28 94 24 50 01 	movaps 0x150(%rsp),%xmm10
+  209ca7:	00 00 
+  209ca9:	44 0f 28 8c 24 60 01 	movaps 0x160(%rsp),%xmm9
+  209cb0:	00 00 
+  209cb2:	44 0f 28 84 24 70 01 	movaps 0x170(%rsp),%xmm8
+  209cb9:	00 00 
+  209cbb:	48 89 c2             	mov    %rax,%rdx
+  209cbe:	41 8d 47 ff          	lea    -0x1(%r15),%eax
+  209cc2:	48 8d 04 40          	lea    (%rax,%rax,2),%rax
+  209cc6:	48 c1 e0 06          	shl    $0x6,%rax
+  209cca:	4c 01 e0             	add    %r12,%rax
+  209ccd:	48 89 82 48 00 00 00 	mov    %rax,0x48(%rdx)
+  209cd4:	43 8d 34 36          	lea    (%r14,%r14,1),%esi
+  209cd8:	49 63 d6             	movslq %r14d,%rdx
+  209cdb:	48 63 c6             	movslq %esi,%rax
+  209cde:	44 01 f6             	add    %r14d,%esi
+  209ce1:	48 63 f6             	movslq %esi,%rsi
+  209ce4:	48 8d 0c 85 50 00 00 	lea    0x50(,%rax,4),%rcx
+  209ceb:	00 
+  209cec:	48 8d 04 95 20 00 00 	lea    0x20(,%rdx,4),%rax
+  209cf3:	00 
+  209cf4:	48 8d 3c b5 40 00 00 	lea    0x40(,%rsi,4),%rdi
+  209cfb:	00 
+  209cfc:	48 c1 e6 02          	shl    $0x2,%rsi
+  209d00:	4c 8d 74 0b f0       	lea    -0x10(%rbx,%rcx,1),%r14
+  209d05:	4c 8d 04 3b          	lea    (%rbx,%rdi,1),%r8
+  209d09:	4c 8d 24 33          	lea    (%rbx,%rsi,1),%r12
+  209d0d:	4c 89 b4 24 30 01 00 	mov    %r14,0x130(%rsp)
+  209d14:	00 
+  209d15:	4c 8d 4c 3b 10       	lea    0x10(%rbx,%rdi,1),%r9
+  209d1a:	4c 8d 7c 3b d0       	lea    -0x30(%rbx,%rdi,1),%r15
+  209d1f:	4c 89 84 24 88 01 00 	mov    %r8,0x188(%rsp)
+  209d26:	00 
+  209d27:	4c 8d 1c 0b          	lea    (%rbx,%rcx,1),%r11
+  209d2b:	48 8d 7c 3b e0       	lea    -0x20(%rbx,%rdi,1),%rdi
+  209d30:	4c 89 8c 24 70 01 00 	mov    %r9,0x170(%rsp)
+  209d37:	00 
+  209d38:	48 89 bc 24 50 01 00 	mov    %rdi,0x150(%rsp)
+  209d3f:	00 
+  209d40:	48 89 d7             	mov    %rdx,%rdi
+  209d43:	48 8d 74 33 30       	lea    0x30(%rbx,%rsi,1),%rsi
+  209d48:	4c 8d 74 0b d0       	lea    -0x30(%rbx,%rcx,1),%r14
+  209d4d:	48 f7 df             	neg    %rdi
+  209d50:	4c 89 bc 24 60 01 00 	mov    %r15,0x160(%rsp)
+  209d57:	00 
+  209d58:	4c 8d 04 03          	lea    (%rbx,%rax,1),%r8
+  209d5c:	4c 8d 7c 0b c0       	lea    -0x40(%rbx,%rcx,1),%r15
+  209d61:	4d 8d 2c fc          	lea    (%r12,%rdi,8),%r13
+  209d65:	48 8d 7c 0b e0       	lea    -0x20(%rbx,%rcx,1),%rdi
+  209d6a:	48 89 b4 24 40 01 00 	mov    %rsi,0x140(%rsp)
+  209d71:	00 
+  209d72:	48 89 bc 24 20 01 00 	mov    %rdi,0x120(%rsp)
+  209d79:	00 
+  209d7a:	48 8d 74 03 20       	lea    0x20(%rbx,%rax,1),%rsi
+  209d7f:	48 8d 7c 03 10       	lea    0x10(%rbx,%rax,1),%rdi
+  209d84:	4c 89 9c 24 a0 01 00 	mov    %r11,0x1a0(%rsp)
+  209d8b:	00 
+  209d8c:	4c 8d 4c 03 f0       	lea    -0x10(%rbx,%rax,1),%r9
+  209d91:	49 8d 54 95 00       	lea    0x0(%r13,%rdx,4),%rdx
+  209d96:	48 8d 4c 03 30       	lea    0x30(%rbx,%rax,1),%rcx
+  209d9b:	40 84 ed             	test   %bpl,%bpl
+  209d9e:	0f 85 67 03 00 00    	jne    20a10b <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]+0xa2b>
+  209da4:	f3 0f 10 03          	movss  (%rbx),%xmm0
+  209da8:	41 0f 10 1f          	movups (%r15),%xmm3
+  209dac:	48 c7 84 24 10 01 00 	movq   $0x0,0x110(%rsp)
+  209db3:	00 00 00 00 00 
+  209db8:	48 bd 00 00 00 00 ff 	movabs $0xffffffff00000000,%rbp
+  209dbf:	ff ff ff 
+  209dc2:	4c 8b 94 24 10 01 00 	mov    0x110(%rsp),%r10
+  209dc9:	00 
+  209dca:	0f 58 9c 24 80 00 00 	addps  0x80(%rsp),%xmm3
+  209dd1:	00 
+  209dd2:	48 c7 84 24 18 01 00 	movq   $0x0,0x118(%rsp)
+  209dd9:	00 00 00 00 00 
+  209dde:	f3 0f 58 c5          	addss  %xmm5,%xmm0
+  209de2:	49 21 ea             	and    %rbp,%r10
+  209de5:	4c 89 d5             	mov    %r10,%rbp
+  209de8:	0f 29 9c 24 80 00 00 	movaps %xmm3,0x80(%rsp)
+  209def:	00 
+  209df0:	41 0f 10 1b          	movups (%r11),%xmm3
+  209df4:	4c 8b 94 24 70 01 00 	mov    0x170(%rsp),%r10
+  209dfb:	00 
+  209dfc:	66 0f 7e c0          	movd   %xmm0,%eax
+  209e00:	0f 28 c5             	movaps %xmm5,%xmm0
+  209e03:	48 09 c5             	or     %rax,%rbp
+  209e06:	48 8b 84 24 88 01 00 	mov    0x188(%rsp),%rax
+  209e0d:	00 
+  209e0e:	0f 29 9c 24 90 01 00 	movaps %xmm3,0x190(%rsp)
+  209e15:	00 
+  209e16:	0f 28 1c 24          	movaps (%rsp),%xmm3
+  209e1a:	0f 58 9c 24 90 01 00 	addps  0x190(%rsp),%xmm3
+  209e21:	00 
+  209e22:	48 89 ac 24 10 01 00 	mov    %rbp,0x110(%rsp)
+  209e29:	00 
+  209e2a:	0f c6 c5 ff          	shufps $0xff,%xmm5,%xmm0
+  209e2e:	0f c6 ed e9          	shufps $0xe9,%xmm5,%xmm5
+  209e32:	0f 10 20             	movups (%rax),%xmm4
+  209e35:	48 8b 84 24 60 01 00 	mov    0x160(%rsp),%rax
+  209e3c:	00 
+  209e3d:	0f 29 a4 24 90 01 00 	movaps %xmm4,0x190(%rsp)
+  209e44:	00 
+  209e45:	0f 28 64 24 20       	movaps 0x20(%rsp),%xmm4
+  209e4a:	0f 58 a4 24 90 01 00 	addps  0x190(%rsp),%xmm4
+  209e51:	00 
+  209e52:	0f 29 1c 24          	movaps %xmm3,(%rsp)
+  209e56:	41 0f 10 1a          	movups (%r10),%xmm3
+  209e5a:	4c 8b 94 24 30 01 00 	mov    0x130(%rsp),%r10
+  209e61:	00 
+  209e62:	0f 29 64 24 20       	movaps %xmm4,0x20(%rsp)
+  209e67:	0f 10 20             	movups (%rax),%xmm4
+  209e6a:	0f 58 f3             	addps  %xmm3,%xmm6
+  209e6d:	41 0f 10 1a          	movups (%r10),%xmm3
+  209e71:	44 0f 58 c4          	addps  %xmm4,%xmm8
+  209e75:	41 0f 10 24 24       	movups (%r12),%xmm4
+  209e7a:	44 0f 58 d3          	addps  %xmm3,%xmm10
+  209e7e:	41 0f 10 1e          	movups (%r14),%xmm3
+  209e82:	0f 58 9c 24 90 00 00 	addps  0x90(%rsp),%xmm3
+  209e89:	00 
+  209e8a:	0f 29 b4 24 20 02 00 	movaps %xmm6,0x220(%rsp)
+  209e91:	00 
+  209e92:	44 0f 58 cc          	addps  %xmm4,%xmm9
+  209e96:	44 0f 29 84 24 10 02 	movaps %xmm8,0x210(%rsp)
+  209e9d:	00 00 
+  209e9f:	44 0f 29 94 24 f0 01 	movaps %xmm10,0x1f0(%rsp)
+  209ea6:	00 00 
+  209ea8:	44 0f 29 8c 24 00 02 	movaps %xmm9,0x200(%rsp)
+  209eaf:	00 00 
+  209eb1:	0f 29 9c 24 90 00 00 	movaps %xmm3,0x90(%rsp)
+  209eb8:	00 
+  209eb9:	48 8b 84 24 50 01 00 	mov    0x150(%rsp),%rax
+  209ec0:	00 
+  209ec1:	0f 28 64 24 10       	movaps 0x10(%rsp),%xmm4
+  209ec6:	4c 8b 9c 24 20 01 00 	mov    0x120(%rsp),%r11
+  209ecd:	00 
+  209ece:	48 89 94 24 c8 01 00 	mov    %rdx,0x1c8(%rsp)
+  209ed5:	00 
+  209ed6:	0f 10 18             	movups (%rax),%xmm3
+  209ed9:	48 8b 84 24 40 01 00 	mov    0x140(%rsp),%rax
+  209ee0:	00 
+  209ee1:	48 89 8c 24 c0 01 00 	mov    %rcx,0x1c0(%rsp)
+  209ee8:	00 
+  209ee9:	48 89 b4 24 b8 01 00 	mov    %rsi,0x1b8(%rsp)
+  209ef0:	00 
+  209ef1:	0f 58 e3             	addps  %xmm3,%xmm4
+  209ef4:	48 89 bc 24 b0 01 00 	mov    %rdi,0x1b0(%rsp)
+  209efb:	00 
+  209efc:	4c 89 84 24 a8 01 00 	mov    %r8,0x1a8(%rsp)
+  209f03:	00 
+  209f04:	0f 29 64 24 10       	movaps %xmm4,0x10(%rsp)
+  209f09:	41 0f 10 23          	movups (%r11),%xmm4
+  209f0d:	44 0f 58 dc          	addps  %xmm4,%xmm11
+  209f11:	0f 10 20             	movups (%rax),%xmm4
+  209f14:	0f 58 fc             	addps  %xmm4,%xmm7
+  209f17:	0f 29 a4 24 90 01 00 	movaps %xmm4,0x190(%rsp)
+  209f1e:	00 
+  209f1f:	44 0f 29 9c 24 e0 01 	movaps %xmm11,0x1e0(%rsp)
+  209f26:	00 00 
+  209f28:	0f 29 bc 24 d0 01 00 	movaps %xmm7,0x1d0(%rsp)
+  209f2f:	00 
+  209f30:	41 0f 10 7d 00       	movups 0x0(%r13),%xmm7
+  209f35:	0f 58 bc 24 f0 00 00 	addps  0xf0(%rsp),%xmm7
+  209f3c:	00 
+  209f3d:	0f 29 bc 24 f0 00 00 	movaps %xmm7,0xf0(%rsp)
+  209f44:	00 
+  209f45:	0f 10 3a             	movups (%rdx),%xmm7
+  209f48:	0f 58 7c 24 70       	addps  0x70(%rsp),%xmm7
+  209f4d:	0f 29 7c 24 70       	movaps %xmm7,0x70(%rsp)
+  209f52:	0f 10 39             	movups (%rcx),%xmm7
+  209f55:	0f 58 7c 24 60       	addps  0x60(%rsp),%xmm7
+  209f5a:	0f 29 7c 24 60       	movaps %xmm7,0x60(%rsp)
+  209f5f:	0f 10 3e             	movups (%rsi),%xmm7
+  209f62:	0f 58 7c 24 50       	addps  0x50(%rsp),%xmm7
+  209f67:	0f 29 7c 24 50       	movaps %xmm7,0x50(%rsp)
+  209f6c:	0f 10 3f             	movups (%rdi),%xmm7
+  209f6f:	0f 58 7c 24 40       	addps  0x40(%rsp),%xmm7
+  209f74:	0f 29 7c 24 40       	movaps %xmm7,0x40(%rsp)
+  209f79:	41 0f 10 38          	movups (%r8),%xmm7
+  209f7d:	0f 58 7c 24 30       	addps  0x30(%rsp),%xmm7
+  209f82:	f3 0f 58 43 0c       	addss  0xc(%rbx),%xmm0
+  209f87:	4c 89 8c 24 90 01 00 	mov    %r9,0x190(%rsp)
+  209f8e:	00 
+  209f8f:	0f 29 7c 24 30       	movaps %xmm7,0x30(%rsp)
+  209f94:	41 0f 10 39          	movups (%r9),%xmm7
+  209f98:	0f 58 bc 24 00 01 00 	addps  0x100(%rsp),%xmm7
+  209f9f:	00 
+  209fa0:	f3 0f 11 84 24 34 02 	movss  %xmm0,0x234(%rsp)
+  209fa7:	00 00 
+  209fa9:	f3 0f 7e 43 04       	movq   0x4(%rbx),%xmm0
+  209fae:	0f 29 bc 24 00 01 00 	movaps %xmm7,0x100(%rsp)
+  209fb5:	00 
+  209fb6:	0f 10 7b 50          	movups 0x50(%rbx),%xmm7
+  209fba:	0f 58 bc 24 e0 00 00 	addps  0xe0(%rsp),%xmm7
+  209fc1:	00 
+  209fc2:	0f 29 bc 24 e0 00 00 	movaps %xmm7,0xe0(%rsp)
+  209fc9:	00 
+  209fca:	0f 10 7b 40          	movups 0x40(%rbx),%xmm7
+  209fce:	0f 58 bc 24 d0 00 00 	addps  0xd0(%rsp),%xmm7
+  209fd5:	00 
+  209fd6:	0f 29 bc 24 d0 00 00 	movaps %xmm7,0xd0(%rsp)
+  209fdd:	00 
+  209fde:	0f 10 7b 30          	movups 0x30(%rbx),%xmm7
+  209fe2:	0f 58 bc 24 c0 00 00 	addps  0xc0(%rsp),%xmm7
+  209fe9:	00 
+  209fea:	0f 29 bc 24 c0 00 00 	movaps %xmm7,0xc0(%rsp)
+  209ff1:	00 
+  209ff2:	0f 10 7b 20          	movups 0x20(%rbx),%xmm7
+  209ff6:	0f 58 bc 24 b0 00 00 	addps  0xb0(%rsp),%xmm7
+  209ffd:	00 
+  209ffe:	0f 29 bc 24 b0 00 00 	movaps %xmm7,0xb0(%rsp)
+  20a005:	00 
+  20a006:	0f 10 7b 10          	movups 0x10(%rbx),%xmm7
+  20a00a:	0f 58 bc 24 a0 00 00 	addps  0xa0(%rsp),%xmm7
+  20a011:	00 
+  20a012:	0f 29 bc 24 a0 00 00 	movaps %xmm7,0xa0(%rsp)
+  20a019:	00 
+  20a01a:	0f 28 f8             	movaps %xmm0,%xmm7
+  20a01d:	0f 58 fd             	addps  %xmm5,%xmm7
+  20a020:	0f 13 bc 24 38 02 00 	movlps %xmm7,0x238(%rsp)
+  20a027:	00 
+  20a028:	48 8d 3d 71 1b 4f 00 	lea    0x4f1b71(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  20a02f:	e8 bc 22 e9 ff       	call   9c2f0 <__tls_get_addr@plt>
+  20a034:	4c 8b 8c 24 90 01 00 	mov    0x190(%rsp),%r9
+  20a03b:	00 
+  20a03c:	4c 8b 84 24 a8 01 00 	mov    0x1a8(%rsp),%r8
+  20a043:	00 
+  20a044:	48 8b bc 24 b0 01 00 	mov    0x1b0(%rsp),%rdi
+  20a04b:	00 
+  20a04c:	48 8b b4 24 b8 01 00 	mov    0x1b8(%rsp),%rsi
+  20a053:	00 
+  20a054:	48 8b 8c 24 c0 01 00 	mov    0x1c0(%rsp),%rcx
+  20a05b:	00 
+  20a05c:	48 8b 94 24 c8 01 00 	mov    0x1c8(%rsp),%rdx
+  20a063:	00 
+  20a064:	0f 28 bc 24 d0 01 00 	movaps 0x1d0(%rsp),%xmm7
+  20a06b:	00 
+  20a06c:	44 0f 28 9c 24 e0 01 	movaps 0x1e0(%rsp),%xmm11
+  20a073:	00 00 
+  20a075:	44 0f 28 94 24 f0 01 	movaps 0x1f0(%rsp),%xmm10
+  20a07c:	00 00 
+  20a07e:	44 0f 28 8c 24 00 02 	movaps 0x200(%rsp),%xmm9
+  20a085:	00 00 
+  20a087:	44 0f 28 84 24 10 02 	movaps 0x210(%rsp),%xmm8
+  20a08e:	00 00 
+  20a090:	80 b8 40 00 00 00 00 	cmpb   $0x0,0x40(%rax)
+  20a097:	0f 84 8b 01 00 00    	je     20a228 <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]+0xb48>
+  20a09d:	4c 8b 94 24 38 02 00 	mov    0x238(%rsp),%r10
+  20a0a4:	00 
+  20a0a5:	89 ed                	mov    %ebp,%ebp
+  20a0a7:	48 83 80 48 00 00 00 	addq   $0x60,0x48(%rax)
+  20a0ae:	60 
+  20a0af:	66 0f 6f b4 24 20 02 	movdqa 0x220(%rsp),%xmm6
+  20a0b6:	00 00 
+  20a0b8:	4d 89 d3             	mov    %r10,%r11
+  20a0bb:	49 c1 ea 20          	shr    $0x20,%r10
+  20a0bf:	49 c1 e3 20          	shl    $0x20,%r11
+  20a0c3:	4c 09 dd             	or     %r11,%rbp
+  20a0c6:	4d 89 d3             	mov    %r10,%r11
+  20a0c9:	4c 8b 94 24 18 01 00 	mov    0x118(%rsp),%r10
+  20a0d0:	00 
+  20a0d1:	48 89 ac 24 10 01 00 	mov    %rbp,0x110(%rsp)
+  20a0d8:	00 
+  20a0d9:	48 bd 00 00 00 00 ff 	movabs $0xffffffff00000000,%rbp
+  20a0e0:	ff ff ff 
+  20a0e3:	49 21 ea             	and    %rbp,%r10
+  20a0e6:	4d 09 da             	or     %r11,%r10
+  20a0e9:	44 8b 9c 24 34 02 00 	mov    0x234(%rsp),%r11d
+  20a0f0:	00 
+  20a0f1:	45 89 d2             	mov    %r10d,%r10d
+  20a0f4:	49 c1 e3 20          	shl    $0x20,%r11
+  20a0f8:	4d 09 da             	or     %r11,%r10
+  20a0fb:	4c 89 94 24 18 01 00 	mov    %r10,0x118(%rsp)
+  20a102:	00 
+  20a103:	0f 28 ac 24 10 01 00 	movaps 0x110(%rsp),%xmm5
+  20a10a:	00 
+  20a10b:	0f 11 2b             	movups %xmm5,(%rbx)
+  20a10e:	0f 28 ac 24 a0 00 00 	movaps 0xa0(%rsp),%xmm5
+  20a115:	00 
+  20a116:	0f 28 a4 24 e0 00 00 	movaps 0xe0(%rsp),%xmm4
+  20a11d:	00 
+  20a11e:	48 8b 84 24 20 01 00 	mov    0x120(%rsp),%rax
+  20a125:	00 
+  20a126:	0f 28 9c 24 90 00 00 	movaps 0x90(%rsp),%xmm3
+  20a12d:	00 
+  20a12e:	0f 11 6b 10          	movups %xmm5,0x10(%rbx)
+  20a132:	0f 28 ac 24 b0 00 00 	movaps 0xb0(%rsp),%xmm5
+  20a139:	00 
+  20a13a:	0f 11 63 50          	movups %xmm4,0x50(%rbx)
+  20a13e:	0f 28 a4 24 00 01 00 	movaps 0x100(%rsp),%xmm4
+  20a145:	00 
+  20a146:	0f 11 6b 20          	movups %xmm5,0x20(%rbx)
+  20a14a:	0f 28 ac 24 c0 00 00 	movaps 0xc0(%rsp),%xmm5
+  20a151:	00 
+  20a152:	0f 11 6b 30          	movups %xmm5,0x30(%rbx)
+  20a156:	0f 28 ac 24 d0 00 00 	movaps 0xd0(%rsp),%xmm5
+  20a15d:	00 
+  20a15e:	0f 11 6b 40          	movups %xmm5,0x40(%rbx)
+  20a162:	0f 28 ac 24 f0 00 00 	movaps 0xf0(%rsp),%xmm5
+  20a169:	00 
+  20a16a:	41 0f 11 6d 00       	movups %xmm5,0x0(%r13)
+  20a16f:	0f 28 6c 24 30       	movaps 0x30(%rsp),%xmm5
+  20a174:	41 0f 11 21          	movups %xmm4,(%r9)
+  20a178:	0f 28 64 24 40       	movaps 0x40(%rsp),%xmm4
+  20a17d:	41 0f 11 28          	movups %xmm5,(%r8)
+  20a181:	0f 28 6c 24 50       	movaps 0x50(%rsp),%xmm5
+  20a186:	0f 11 27             	movups %xmm4,(%rdi)
+  20a189:	0f 28 64 24 60       	movaps 0x60(%rsp),%xmm4
+  20a18e:	0f 11 2e             	movups %xmm5,(%rsi)
+  20a191:	0f 28 6c 24 70       	movaps 0x70(%rsp),%xmm5
+  20a196:	0f 11 21             	movups %xmm4,(%rcx)
+  20a199:	0f 28 a4 24 80 00 00 	movaps 0x80(%rsp),%xmm4
+  20a1a0:	00 
+  20a1a1:	0f 11 2a             	movups %xmm5,(%rdx)
+  20a1a4:	41 0f 11 27          	movups %xmm4,(%r15)
+  20a1a8:	41 0f 11 1e          	movups %xmm3,(%r14)
+  20a1ac:	44 0f 11 18          	movups %xmm11,(%rax)
+  20a1b0:	48 8b 84 24 30 01 00 	mov    0x130(%rsp),%rax
+  20a1b7:	00 
+  20a1b8:	44 0f 11 10          	movups %xmm10,(%rax)
+  20a1bc:	48 8b 84 24 a0 01 00 	mov    0x1a0(%rsp),%rax
+  20a1c3:	00 
+  20a1c4:	0f 28 2c 24          	movaps (%rsp),%xmm5
+  20a1c8:	0f 28 64 24 10       	movaps 0x10(%rsp),%xmm4
+  20a1cd:	0f 11 28             	movups %xmm5,(%rax)
+  20a1d0:	48 8b 84 24 60 01 00 	mov    0x160(%rsp),%rax
+  20a1d7:	00 
+  20a1d8:	45 0f 11 0c 24       	movups %xmm9,(%r12)
+  20a1dd:	44 0f 11 00          	movups %xmm8,(%rax)
+  20a1e1:	48 8b 84 24 50 01 00 	mov    0x150(%rsp),%rax
+  20a1e8:	00 
+  20a1e9:	0f 11 20             	movups %xmm4,(%rax)
+  20a1ec:	48 8b 84 24 40 01 00 	mov    0x140(%rsp),%rax
+  20a1f3:	00 
+  20a1f4:	0f 11 38             	movups %xmm7,(%rax)
+  20a1f7:	48 8b 84 24 88 01 00 	mov    0x188(%rsp),%rax
+  20a1fe:	00 
+  20a1ff:	0f 28 7c 24 20       	movaps 0x20(%rsp),%xmm7
+  20a204:	0f 11 38             	movups %xmm7,(%rax)
+  20a207:	48 8b 84 24 70 01 00 	mov    0x170(%rsp),%rax
+  20a20e:	00 
+  20a20f:	0f 11 30             	movups %xmm6,(%rax)
+  20a212:	48 81 c4 48 02 00 00 	add    $0x248,%rsp
+  20a219:	5b                   	pop    %rbx
+  20a21a:	5d                   	pop    %rbp
+  20a21b:	41 5c                	pop    %r12
+  20a21d:	41 5d                	pop    %r13
+  20a21f:	41 5e                	pop    %r14
+  20a221:	41 5f                	pop    %r15
+  20a223:	c3                   	ret
+  20a224:	0f 1f 40 00          	nopl   0x0(%rax)
+  20a228:	48 8b 84 24 38 02 00 	mov    0x238(%rsp),%rax
+  20a22f:	00 
+  20a230:	41 89 ea             	mov    %ebp,%r10d
+  20a233:	66 0f 6f b4 24 20 02 	movdqa 0x220(%rsp),%xmm6
+  20a23a:	00 00 
+  20a23c:	49 89 c3             	mov    %rax,%r11
+  20a23f:	48 c1 e8 20          	shr    $0x20,%rax
+  20a243:	49 c1 e3 20          	shl    $0x20,%r11
+  20a247:	4d 09 da             	or     %r11,%r10
+  20a24a:	49 bb 00 00 00 00 ff 	movabs $0xffffffff00000000,%r11
+  20a251:	ff ff ff 
+  20a254:	4c 89 94 24 10 01 00 	mov    %r10,0x110(%rsp)
+  20a25b:	00 
+  20a25c:	49 89 c2             	mov    %rax,%r10
+  20a25f:	48 8b 84 24 18 01 00 	mov    0x118(%rsp),%rax
+  20a266:	00 
+  20a267:	4c 21 d8             	and    %r11,%rax
+  20a26a:	4c 09 d0             	or     %r10,%rax
+  20a26d:	44 8b 94 24 34 02 00 	mov    0x234(%rsp),%r10d
+  20a274:	00 
+  20a275:	89 c0                	mov    %eax,%eax
+  20a277:	49 c1 e2 20          	shl    $0x20,%r10
+  20a27b:	4c 09 d0             	or     %r10,%rax
+  20a27e:	48 89 84 24 18 01 00 	mov    %rax,0x118(%rsp)
+  20a285:	00 
+  20a286:	0f 28 ac 24 10 01 00 	movaps 0x110(%rsp),%xmm5
+  20a28d:	00 
+  20a28e:	e9 78 fe ff ff       	jmp    20a10b <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]+0xa2b>
+  20a293:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  20a298:	66 0f ef f6          	pxor   %xmm6,%xmm6
+  20a29c:	0f 28 fe             	movaps %xmm6,%xmm7
+  20a29f:	0f 29 74 24 20       	movaps %xmm6,0x20(%rsp)
+  20a2a4:	0f 28 ee             	movaps %xmm6,%xmm5
+  20a2a7:	44 0f 28 c6          	movaps %xmm6,%xmm8
+  20a2ab:	44 0f 28 ce          	movaps %xmm6,%xmm9
+  20a2af:	0f 29 34 24          	movaps %xmm6,(%rsp)
+  20a2b3:	44 0f 28 d6          	movaps %xmm6,%xmm10
+  20a2b7:	44 0f 28 de          	movaps %xmm6,%xmm11
+  20a2bb:	0f 29 74 24 10       	movaps %xmm6,0x10(%rsp)
+  20a2c0:	0f 29 b4 24 90 00 00 	movaps %xmm6,0x90(%rsp)
+  20a2c7:	00 
+  20a2c8:	0f 29 b4 24 80 00 00 	movaps %xmm6,0x80(%rsp)
+  20a2cf:	00 
+  20a2d0:	0f 29 74 24 70       	movaps %xmm6,0x70(%rsp)
+  20a2d5:	0f 29 74 24 60       	movaps %xmm6,0x60(%rsp)
+  20a2da:	0f 29 74 24 50       	movaps %xmm6,0x50(%rsp)
+  20a2df:	0f 29 74 24 40       	movaps %xmm6,0x40(%rsp)
+  20a2e4:	0f 29 74 24 30       	movaps %xmm6,0x30(%rsp)
+  20a2e9:	0f 29 b4 24 00 01 00 	movaps %xmm6,0x100(%rsp)
+  20a2f0:	00 
+  20a2f1:	0f 29 b4 24 f0 00 00 	movaps %xmm6,0xf0(%rsp)
+  20a2f8:	00 
+  20a2f9:	0f 29 b4 24 e0 00 00 	movaps %xmm6,0xe0(%rsp)
+  20a300:	00 
+  20a301:	0f 29 b4 24 d0 00 00 	movaps %xmm6,0xd0(%rsp)
+  20a308:	00 
+  20a309:	0f 29 b4 24 c0 00 00 	movaps %xmm6,0xc0(%rsp)
+  20a310:	00 
+  20a311:	0f 29 b4 24 b0 00 00 	movaps %xmm6,0xb0(%rsp)
+  20a318:	00 
+  20a319:	0f 29 b4 24 a0 00 00 	movaps %xmm6,0xa0(%rsp)
+  20a320:	00 
+  20a321:	e9 ae f9 ff ff       	jmp    209cd4 <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]+0x5f4>
+  20a326:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+  20a32d:	00 00 00 
+
+  20e851:	e9 8a ae ff ff       	jmp    2096e0 <cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0]>
+  20e856:	49 63 c7             	movslq %r15d,%rax
+  20e859:	49 8d 7a 10          	lea    0x10(%r10),%rdi
+  20e85d:	45 89 e7             	mov    %r12d,%r15d
+  20e860:	45 31 c0             	xor    %r8d,%r8d
+  20e863:	48 c1 e0 04          	shl    $0x4,%rax
+  20e867:	48 89 7c 24 10       	mov    %rdi,0x10(%rsp)
+  20e86c:	41 83 e7 01          	and    $0x1,%r15d
+  20e870:	48 8d 14 38          	lea    (%rax,%rdi,1),%rdx
+  20e874:	41 8d 44 24 ff       	lea    -0x1(%r12),%eax
+  20e879:	44 89 e7             	mov    %r12d,%edi
+  20e87c:	48 89 8c 24 a8 00 00 	mov    %rcx,0xa8(%rsp)
+  20e883:	00 
+  20e884:	89 04 24             	mov    %eax,(%rsp)
+  20e887:	48 8d 44 00 02       	lea    0x2(%rax,%rax,1),%rax
+  20e88c:	c1 ef 02             	shr    $0x2,%edi
+  20e88f:	48 89 44 24 40       	mov    %rax,0x40(%rsp)
+  20e894:	44 89 e0             	mov    %r12d,%eax
+  20e897:	48 c1 e7 04          	shl    $0x4,%rdi
+  20e89b:	83 e0 03             	and    $0x3,%eax
+  20e89e:	48 89 94 24 90 00 00 	mov    %rdx,0x90(%rsp)
+  20e8a5:	00 
+  20e8a6:	89 44 24 60          	mov    %eax,0x60(%rsp)
+  20e8aa:	44 89 e0             	mov    %r12d,%eax
+  20e8ad:	83 e0 fc             	and    $0xfffffffc,%eax
+  20e8b0:	89 44 24 20          	mov    %eax,0x20(%rsp)
+  20e8b4:	44 89 e0             	mov    %r12d,%eax
+  20e8b7:	83 e0 fe             	and    $0xfffffffe,%eax
+  20e8ba:	89 44 24 50          	mov    %eax,0x50(%rsp)
+  20e8be:	44 89 f0             	mov    %r14d,%eax
+  20e8c1:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+  20e8c6:	44 8b 74 24 20       	mov    0x20(%rsp),%r14d
+  20e8cb:	4d 63 d8             	movslq %r8d,%r11
+  20e8ce:	31 c9                	xor    %ecx,%ecx
+  20e8d0:	4e 8d 4c 9d 00       	lea    0x0(%rbp,%r11,4),%r9
+  20e8d5:	4c 8d 56 f0          	lea    -0x10(%rsi),%r10
+  20e8d9:	4d 01 f3             	add    %r14,%r11
+  20e8dc:	0f 1f 40 00          	nopl   0x0(%rax)
+  20e8e0:	f3 41 0f 10 1a       	movss  (%r10),%xmm3
+  20e8e5:	45 85 e4             	test   %r12d,%r12d
+  20e8e8:	0f 84 a8 00 00 00    	je     20e996 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x606>
+  20e8ee:	83 3c 24 02          	cmpl   $0x2,(%rsp)
+  20e8f2:	0f 86 29 03 00 00    	jbe    20ec21 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x891>
+  20e8f8:	48 63 f1             	movslq %ecx,%rsi
+  20e8fb:	0f 28 cb             	movaps %xmm3,%xmm1
+  20e8fe:	31 c0                	xor    %eax,%eax
+  20e900:	48 8d 14 b3          	lea    (%rbx,%rsi,4),%rdx
+  20e904:	0f c6 c9 00          	shufps $0x0,%xmm1,%xmm1
+  20e908:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  20e90f:	00 
+  20e910:	41 0f 10 04 01       	movups (%r9,%rax,1),%xmm0
+  20e915:	0f 10 24 02          	movups (%rdx,%rax,1),%xmm4
+  20e919:	0f 59 c1             	mulps  %xmm1,%xmm0
+  20e91c:	0f 58 c4             	addps  %xmm4,%xmm0
+  20e91f:	0f 11 04 02          	movups %xmm0,(%rdx,%rax,1)
+  20e923:	48 83 c0 10          	add    $0x10,%rax
+  20e927:	48 39 f8             	cmp    %rdi,%rax
+  20e92a:	75 e4                	jne    20e910 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x580>
+  20e92c:	8b 44 24 20          	mov    0x20(%rsp),%eax
+  20e930:	41 39 c4             	cmp    %eax,%r12d
+  20e933:	74 54                	je     20e989 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x5f9>
+  20e935:	83 7c 24 60 01       	cmpl   $0x1,0x60(%rsp)
+  20e93a:	0f 84 f0 07 00 00    	je     20f130 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xda0>
+  20e940:	f3 0f 12 d3          	movsldup %xmm3,%xmm2
+  20e944:	f3 42 0f 7e 4c 9d 00 	movq   0x0(%rbp,%r11,4),%xmm1
+  20e94b:	4c 01 f6             	add    %r14,%rsi
+  20e94e:	48 8d 04 b3          	lea    (%rbx,%rsi,4),%rax
+  20e952:	0f 59 ca             	mulps  %xmm2,%xmm1
+  20e955:	f3 0f 7e 10          	movq   (%rax),%xmm2
+  20e959:	0f 58 ca             	addps  %xmm2,%xmm1
+  20e95c:	0f 13 08             	movlps %xmm1,(%rax)
+  20e95f:	45 85 ff             	test   %r15d,%r15d
+  20e962:	74 25                	je     20e989 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x5f9>
+  20e964:	8b 44 24 50          	mov    0x50(%rsp),%eax
+  20e968:	8d 14 08             	lea    (%rax,%rcx,1),%edx
+  20e96b:	44 01 c0             	add    %r8d,%eax
+  20e96e:	48 98                	cltq
+  20e970:	48 63 d2             	movslq %edx,%rdx
+  20e973:	f3 0f 59 5c 85 00    	mulss  0x0(%rbp,%rax,4),%xmm3
+  20e979:	48 8d 14 93          	lea    (%rbx,%rdx,4),%rdx
+  20e97d:	f3 0f 10 02          	movss  (%rdx),%xmm0
+  20e981:	f3 0f 58 c3          	addss  %xmm3,%xmm0
+  20e985:	f3 0f 11 02          	movss  %xmm0,(%rdx)
+  20e989:	48 8b 44 24 40       	mov    0x40(%rsp),%rax
+  20e98e:	49 01 c5             	add    %rax,%r13
+  20e991:	0f b6 44 24 30       	movzbl 0x30(%rsp),%eax
+  20e996:	49 83 c2 04          	add    $0x4,%r10
+  20e99a:	44 01 e1             	add    %r12d,%ecx
+  20e99d:	4c 39 54 24 10       	cmp    %r10,0x10(%rsp)
+  20e9a2:	0f 85 38 ff ff ff    	jne    20e8e0 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x550>
+  20e9a8:	8b 4c 24 70          	mov    0x70(%rsp),%ecx
+  20e9ac:	48 83 44 24 10 10    	addq   $0x10,0x10(%rsp)
+  20e9b2:	48 8b 74 24 10       	mov    0x10(%rsp),%rsi
+  20e9b7:	41 01 c8             	add    %ecx,%r8d
+  20e9ba:	48 8b 8c 24 90 00 00 	mov    0x90(%rsp),%rcx
+  20e9c1:	00 
+  20e9c2:	48 39 ce             	cmp    %rcx,%rsi
+  20e9c5:	0f 85 f6 fe ff ff    	jne    20e8c1 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x531>
+  20e9cb:	48 8b 8c 24 a8 00 00 	mov    0xa8(%rsp),%rcx
+  20e9d2:	00 
+  20e9d3:	84 c0                	test   %al,%al
+  20e9d5:	0f 84 da 03 00 00    	je     20edb5 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xa25>
+  20e9db:	48 89 4c 24 10       	mov    %rcx,0x10(%rsp)
+  20e9e0:	48 8d 3d b9 d1 4e 00 	lea    0x4ed1b9(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  20e9e7:	e8 04 d9 e8 ff       	call   9c2f0 <__tls_get_addr@plt>
+  20e9ec:	80 bc 24 8c 00 00 00 	cmpb   $0x0,0x8c(%rsp)
+  20e9f3:	00 
+  20e9f4:	48 8b 4c 24 10       	mov    0x10(%rsp),%rcx
+  20e9f9:	4c 89 a8 48 00 00 00 	mov    %r13,0x48(%rax)
+  20ea00:	0f 85 bd 03 00 00    	jne    20edc3 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xa33>
+  20ea06:	45 85 e4             	test   %r12d,%r12d
+  20ea09:	0f 84 8e 00 00 00    	je     20ea9d <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x70d>
+  20ea0f:	48 8b 84 24 a0 00 00 	mov    0xa0(%rsp),%rax
+  20ea16:	00 
+  20ea17:	4c 63 bc 24 88 00 00 	movslq 0x88(%rsp),%r15
+  20ea1e:	00 
+  20ea1f:	49 f7 dc             	neg    %r12
+  20ea22:	49 89 de             	mov    %rbx,%r14
+  20ea25:	49 c1 e4 02          	shl    $0x2,%r12
+  20ea29:	4c 8d 2c 01          	lea    (%rcx,%rax,1),%r13
+  20ea2d:	49 c1 e7 02          	shl    $0x2,%r15
+  20ea31:	48 8d 3d 68 d1 4e 00 	lea    0x4ed168(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  20ea38:	e8 b3 d8 e8 ff       	call   9c2f0 <__tls_get_addr@plt>
+  20ea3d:	48 8b b4 24 a0 00 00 	mov    0xa0(%rsp),%rsi
+  20ea44:	00 
+  20ea45:	b9 04 00 00 00       	mov    $0x4,%ecx
+  20ea4a:	48 8b a8 48 00 00 00 	mov    0x48(%rax),%rbp
+  20ea51:	4b 8d 04 2c          	lea    (%r12,%r13,1),%rax
+  20ea55:	4c 89 f2             	mov    %r14,%rdx
+  20ea58:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+  20ea5f:	00 
+  20ea60:	f3 0f 10 00          	movss  (%rax),%xmm0
+  20ea64:	f3 0f 58 02          	addss  (%rdx),%xmm0
+  20ea68:	48 83 c0 04          	add    $0x4,%rax
+  20ea6c:	48 83 c5 01          	add    $0x1,%rbp
+  20ea70:	48 83 c2 04          	add    $0x4,%rdx
+  20ea74:	f3 0f 11 40 fc       	movss  %xmm0,-0x4(%rax)
+  20ea79:	4c 39 e8             	cmp    %r13,%rax
+  20ea7c:	75 e2                	jne    20ea60 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x6d0>
+  20ea7e:	49 01 f6             	add    %rsi,%r14
+  20ea81:	4e 8d 2c 38          	lea    (%rax,%r15,1),%r13
+  20ea85:	83 e9 01             	sub    $0x1,%ecx
+  20ea88:	75 c7                	jne    20ea51 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x6c1>
+  20ea8a:	48 8d 3d 0f d1 4e 00 	lea    0x4ed10f(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  20ea91:	e8 5a d8 e8 ff       	call   9c2f0 <__tls_get_addr@plt>
+  20ea96:	48 89 a8 48 00 00 00 	mov    %rbp,0x48(%rax)
+  20ea9d:	48 85 db             	test   %rbx,%rbx
+  20eaa0:	0f 84 51 fd ff ff    	je     20e7f7 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x467>
+  20eaa6:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+  20eaad:	00 
+  20eaae:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+  20eab5:	00 00 
+  20eab7:	0f 85 12 07 00 00    	jne    20f1cf <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xe3f>
+  20eabd:	48 81 c4 e8 00 00 00 	add    $0xe8,%rsp
+  20eac4:	48 89 df             	mov    %rbx,%rdi
+  20eac7:	5b                   	pop    %rbx
+  20eac8:	5d                   	pop    %rbp
+  20eac9:	41 5c                	pop    %r12
+  20eacb:	41 5d                	pop    %r13
+  20eacd:	41 5e                	pop    %r14
+  20eacf:	41 5f                	pop    %r15
+  20ead1:	e9 ca c2 e8 ff       	jmp    9ada0 <operator delete(void*)@plt>
+  20ead6:	49 83 c3 04          	add    $0x4,%r11
+  20eada:	4d 39 d3             	cmp    %r10,%r11
+  20eadd:	75 f7                	jne    20ead6 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x746>
+  20eadf:	8b 7c 24 70          	mov    0x70(%rsp),%edi
+  20eae3:	49 83 c2 10          	add    $0x10,%r10
+  20eae7:	83 c0 04             	add    $0x4,%eax
+  20eaea:	41 01 f9             	add    %edi,%r9d
+  20eaed:	39 44 24 50          	cmp    %eax,0x50(%rsp)
+  20eaf1:	0f 85 29 fa ff ff    	jne    20e520 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x190>
+  20eaf7:	80 bc 24 8c 00 00 00 	cmpb   $0x0,0x8c(%rsp)
+  20eafe:	00 
+  20eaff:	48 8b 4c 24 60       	mov    0x60(%rsp),%rcx
+  20eb04:	0f 85 b9 02 00 00    	jne    20edc3 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xa33>
+  20eb0a:	45 85 e4             	test   %r12d,%r12d
+  20eb0d:	74 8e                	je     20ea9d <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x70d>
+  20eb0f:	48 63 84 24 88 00 00 	movslq 0x88(%rsp),%rax
+  20eb16:	00 
+  20eb17:	45 89 e6             	mov    %r12d,%r14d
+  20eb1a:	45 89 e0             	mov    %r12d,%r8d
+  20eb1d:	31 ff                	xor    %edi,%edi
+  20eb1f:	41 83 e6 fc          	and    $0xfffffffc,%r14d
+  20eb23:	41 c1 e8 02          	shr    $0x2,%r8d
+  20eb27:	45 89 e7             	mov    %r12d,%r15d
+  20eb2a:	45 31 db             	xor    %r11d,%r11d
+  20eb2d:	48 89 44 24 10       	mov    %rax,0x10(%rsp)
+  20eb32:	49 63 c4             	movslq %r12d,%rax
+  20eb35:	49 c1 e0 04          	shl    $0x4,%r8
+  20eb39:	45 31 d2             	xor    %r10d,%r10d
+  20eb3c:	48 89 44 24 20       	mov    %rax,0x20(%rsp)
+  20eb41:	44 89 e0             	mov    %r12d,%eax
+  20eb44:	31 f6                	xor    %esi,%esi
+  20eb46:	bd 04 00 00 00       	mov    $0x4,%ebp
+  20eb4b:	83 e0 03             	and    $0x3,%eax
+  20eb4e:	45 89 f5             	mov    %r14d,%r13d
+  20eb51:	41 83 e7 01          	and    $0x1,%r15d
+  20eb55:	89 44 24 30          	mov    %eax,0x30(%rsp)
+  20eb59:	44 89 e0             	mov    %r12d,%eax
+  20eb5c:	83 e0 02             	and    $0x2,%eax
+  20eb5f:	44 01 f0             	add    %r14d,%eax
+  20eb62:	89 44 24 40          	mov    %eax,0x40(%rsp)
+  20eb66:	83 3c 24 02          	cmpl   $0x2,(%rsp)
+  20eb6a:	0f 86 9a 04 00 00    	jbe    20f00a <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xc7a>
+  20eb70:	4a 8d 14 91          	lea    (%rcx,%r10,4),%rdx
+  20eb74:	4e 8d 0c 9b          	lea    (%rbx,%r11,4),%r9
+  20eb78:	31 c0                	xor    %eax,%eax
+  20eb7a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+  20eb80:	0f 10 2c 02          	movups (%rdx,%rax,1),%xmm5
+  20eb84:	41 0f 10 04 01       	movups (%r9,%rax,1),%xmm0
+  20eb89:	0f 58 c5             	addps  %xmm5,%xmm0
+  20eb8c:	0f 11 04 02          	movups %xmm0,(%rdx,%rax,1)
+  20eb90:	48 83 c0 10          	add    $0x10,%rax
+  20eb94:	4c 39 c0             	cmp    %r8,%rax
+  20eb97:	75 e7                	jne    20eb80 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x7f0>
+  20eb99:	45 39 f4             	cmp    %r14d,%r12d
+  20eb9c:	74 4a                	je     20ebe8 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x858>
+  20eb9e:	83 7c 24 30 01       	cmpl   $0x1,0x30(%rsp)
+  20eba3:	0f 84 2b 06 00 00    	je     20f1d4 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xe44>
+  20eba9:	4b 8d 04 2a          	lea    (%r10,%r13,1),%rax
+  20ebad:	4b 8d 14 2b          	lea    (%r11,%r13,1),%rdx
+  20ebb1:	48 8d 04 81          	lea    (%rcx,%rax,4),%rax
+  20ebb5:	f3 0f 7e 04 93       	movq   (%rbx,%rdx,4),%xmm0
+  20ebba:	f3 0f 7e 08          	movq   (%rax),%xmm1
+  20ebbe:	0f 58 c1             	addps  %xmm1,%xmm0
+  20ebc1:	0f 13 00             	movlps %xmm0,(%rax)
+  20ebc4:	45 85 ff             	test   %r15d,%r15d
+  20ebc7:	74 1f                	je     20ebe8 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x858>
+  20ebc9:	8b 44 24 40          	mov    0x40(%rsp),%eax
+  20ebcd:	8d 14 30             	lea    (%rax,%rsi,1),%edx
+  20ebd0:	01 f8                	add    %edi,%eax
+  20ebd2:	48 63 d2             	movslq %edx,%rdx
+  20ebd5:	48 98                	cltq
+  20ebd7:	48 8d 14 91          	lea    (%rcx,%rdx,4),%rdx
+  20ebdb:	f3 0f 10 02          	movss  (%rdx),%xmm0
+  20ebdf:	f3 0f 58 04 83       	addss  (%rbx,%rax,4),%xmm0
+  20ebe4:	f3 0f 11 02          	movss  %xmm0,(%rdx)
+  20ebe8:	8b 84 24 88 00 00 00 	mov    0x88(%rsp),%eax
+  20ebef:	44 01 e7             	add    %r12d,%edi
+  20ebf2:	01 c6                	add    %eax,%esi
+  20ebf4:	48 8b 44 24 10       	mov    0x10(%rsp),%rax
+  20ebf9:	49 01 c2             	add    %rax,%r10
+  20ebfc:	48 8b 44 24 20       	mov    0x20(%rsp),%rax
+  20ec01:	49 01 c3             	add    %rax,%r11
+  20ec04:	83 ed 01             	sub    $0x1,%ebp
+  20ec07:	0f 85 59 ff ff ff    	jne    20eb66 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x7d6>
+  20ec0d:	e9 8b fe ff ff       	jmp    20ea9d <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x70d>
+  20ec12:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+  20ec18:	8b 44 24 40          	mov    0x40(%rsp),%eax
+  20ec1c:	e9 be fe ff ff       	jmp    20eadf <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x74f>
+  20ec21:	31 c0                	xor    %eax,%eax
+  20ec23:	e9 40 fd ff ff       	jmp    20e968 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x5d8>
+  20ec28:	83 7c 24 70 03       	cmpl   $0x3,0x70(%rsp)
+  20ec2d:	0f 8e a5 04 00 00    	jle    20f0d8 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xd48>
+  20ec33:	48 89 74 24 10       	mov    %rsi,0x10(%rsp)
+  20ec38:	85 ff                	test   %edi,%edi
+  20ec3a:	0f 8e 40 04 00 00    	jle    20f080 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xcf0>
+  20ec40:	48 89 0c 24          	mov    %rcx,(%rsp)
+  20ec44:	48 8d 3d 55 cf 4e 00 	lea    0x4ecf55(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  20ec4b:	e8 a0 d6 e8 ff       	call   9c2f0 <__tls_get_addr@plt>
+  20ec50:	48 63 54 24 70       	movslq 0x70(%rsp),%rdx
+  20ec55:	48 8b 0c 24          	mov    (%rsp),%rcx
+  20ec59:	4c 8b 54 24 10       	mov    0x10(%rsp),%r10
+  20ec5e:	48 c1 e2 02          	shl    $0x2,%rdx
+  20ec62:	80 b8 40 00 00 00 00 	cmpb   $0x0,0x40(%rax)
+  20ec69:	48 8b 98 48 00 00 00 	mov    0x48(%rax),%rbx
+  20ec70:	49 63 c7             	movslq %r15d,%rax
+  20ec73:	0f 85 5d 02 00 00    	jne    20eed6 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xb46>
+  20ec79:	66 0f ef c9          	pxor   %xmm1,%xmm1
+  20ec7d:	48 c1 e0 04          	shl    $0x4,%rax
+  20ec81:	0f 28 d1             	movaps %xmm1,%xmm2
+  20ec84:	0f 28 d9             	movaps %xmm1,%xmm3
+  20ec87:	0f 28 e1             	movaps %xmm1,%xmm4
+  20ec8a:	4c 01 d0             	add    %r10,%rax
+  20ec8d:	0f 28 e9             	movaps %xmm1,%xmm5
+  20ec90:	0f 28 f1             	movaps %xmm1,%xmm6
+  20ec93:	0f 28 f9             	movaps %xmm1,%xmm7
+  20ec96:	44 0f 28 c1          	movaps %xmm1,%xmm8
+  20ec9a:	41 0f 10 02          	movups (%r10),%xmm0
+  20ec9e:	44 0f 10 4d 00       	movups 0x0(%rbp),%xmm9
+  20eca3:	49 83 c2 10          	add    $0x10,%r10
+  20eca7:	44 0f 28 e0          	movaps %xmm0,%xmm12
+  20ecab:	44 0f 28 d8          	movaps %xmm0,%xmm11
+  20ecaf:	44 0f 28 d0          	movaps %xmm0,%xmm10
+  20ecb3:	44 0f c6 e0 00       	shufps $0x0,%xmm0,%xmm12
+  20ecb8:	45 0f 28 ec          	movaps %xmm12,%xmm13
+  20ecbc:	44 0f c6 d8 55       	shufps $0x55,%xmm0,%xmm11
+  20ecc1:	44 0f c6 d0 aa       	shufps $0xaa,%xmm0,%xmm10
+  20ecc6:	45 0f 59 e9          	mulps  %xmm9,%xmm13
+  20ecca:	0f c6 c0 ff          	shufps $0xff,%xmm0,%xmm0
+  20ecce:	45 0f 58 c5          	addps  %xmm13,%xmm8
+  20ecd2:	45 0f 28 e9          	movaps %xmm9,%xmm13
+  20ecd6:	45 0f 59 eb          	mulps  %xmm11,%xmm13
+  20ecda:	41 0f 58 f5          	addps  %xmm13,%xmm6
+  20ecde:	45 0f 28 e9          	movaps %xmm9,%xmm13
+  20ece2:	44 0f 59 c8          	mulps  %xmm0,%xmm9
+  20ece6:	45 0f 59 ea          	mulps  %xmm10,%xmm13
+  20ecea:	41 0f 58 d1          	addps  %xmm9,%xmm2
+  20ecee:	44 0f 10 4d 10       	movups 0x10(%rbp),%xmm9
+  20ecf3:	48 01 d5             	add    %rdx,%rbp
+  20ecf6:	41 0f 58 e5          	addps  %xmm13,%xmm4
+  20ecfa:	45 0f 59 e1          	mulps  %xmm9,%xmm12
+  20ecfe:	45 0f 59 d9          	mulps  %xmm9,%xmm11
+  20ed02:	45 0f 59 d1          	mulps  %xmm9,%xmm10
+  20ed06:	41 0f 59 c1          	mulps  %xmm9,%xmm0
+  20ed0a:	41 0f 58 fc          	addps  %xmm12,%xmm7
+  20ed0e:	41 0f 58 eb          	addps  %xmm11,%xmm5
+  20ed12:	41 0f 58 da          	addps  %xmm10,%xmm3
+  20ed16:	0f 58 c8             	addps  %xmm0,%xmm1
+  20ed19:	4c 39 d0             	cmp    %r10,%rax
+  20ed1c:	0f 85 78 ff ff ff    	jne    20ec9a <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x90a>
+  20ed22:	48 63 84 24 88 00 00 	movslq 0x88(%rsp),%rax
+  20ed29:	00 
+  20ed2a:	8d 14 00             	lea    (%rax,%rax,1),%edx
+  20ed2d:	4c 8d 4c 81 10       	lea    0x10(%rcx,%rax,4),%r9
+  20ed32:	48 63 f2             	movslq %edx,%rsi
+  20ed35:	01 c2                	add    %eax,%edx
+  20ed37:	48 f7 d8             	neg    %rax
+  20ed3a:	48 63 d2             	movslq %edx,%rdx
+  20ed3d:	48 c1 e0 02          	shl    $0x2,%rax
+  20ed41:	4c 8d 44 b1 10       	lea    0x10(%rcx,%rsi,4),%r8
+  20ed46:	48 8d 7c 91 10       	lea    0x10(%rcx,%rdx,4),%rdi
+  20ed4b:	48 8d 14 91          	lea    (%rcx,%rdx,4),%rdx
+  20ed4f:	48 8d 34 02          	lea    (%rdx,%rax,1),%rsi
+  20ed53:	48 01 f0             	add    %rsi,%rax
+  20ed56:	80 bc 24 8c 00 00 00 	cmpb   $0x0,0x8c(%rsp)
+  20ed5d:	00 
+  20ed5e:	75 34                	jne    20ed94 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xa04>
+  20ed60:	0f 10 01             	movups (%rcx),%xmm0
+  20ed63:	44 0f 58 c0          	addps  %xmm0,%xmm8
+  20ed67:	0f 10 41 10          	movups 0x10(%rcx),%xmm0
+  20ed6b:	0f 58 f8             	addps  %xmm0,%xmm7
+  20ed6e:	0f 10 00             	movups (%rax),%xmm0
+  20ed71:	0f 58 f0             	addps  %xmm0,%xmm6
+  20ed74:	41 0f 10 01          	movups (%r9),%xmm0
+  20ed78:	0f 58 e8             	addps  %xmm0,%xmm5
+  20ed7b:	0f 10 06             	movups (%rsi),%xmm0
+  20ed7e:	0f 58 e0             	addps  %xmm0,%xmm4
+  20ed81:	41 0f 10 00          	movups (%r8),%xmm0
+  20ed85:	0f 58 d8             	addps  %xmm0,%xmm3
+  20ed88:	0f 10 02             	movups (%rdx),%xmm0
+  20ed8b:	0f 58 d0             	addps  %xmm0,%xmm2
+  20ed8e:	0f 10 07             	movups (%rdi),%xmm0
+  20ed91:	0f 58 c8             	addps  %xmm0,%xmm1
+  20ed94:	44 0f 11 01          	movups %xmm8,(%rcx)
+  20ed98:	0f 11 79 10          	movups %xmm7,0x10(%rcx)
+  20ed9c:	0f 11 30             	movups %xmm6,(%rax)
+  20ed9f:	41 0f 11 29          	movups %xmm5,(%r9)
+  20eda3:	0f 11 26             	movups %xmm4,(%rsi)
+  20eda6:	41 0f 11 18          	movups %xmm3,(%r8)
+  20edaa:	0f 11 12             	movups %xmm2,(%rdx)
+  20edad:	0f 11 0f             	movups %xmm1,(%rdi)
+  20edb0:	e9 42 fa ff ff       	jmp    20e7f7 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x467>
+  20edb5:	80 bc 24 8c 00 00 00 	cmpb   $0x0,0x8c(%rsp)
+  20edbc:	00 
+  20edbd:	0f 84 43 fc ff ff    	je     20ea06 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x676>
+  20edc3:	45 85 e4             	test   %r12d,%r12d
+  20edc6:	0f 84 d1 fc ff ff    	je     20ea9d <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x70d>
+  20edcc:	4c 63 a4 24 88 00 00 	movslq 0x88(%rsp),%r12
+  20edd3:	00 
+  20edd4:	8b 04 24             	mov    (%rsp),%eax
+  20edd7:	49 89 dd             	mov    %rbx,%r13
+  20edda:	bd 04 00 00 00       	mov    $0x4,%ebp
+  20eddf:	4c 8b bc 24 a0 00 00 	mov    0xa0(%rsp),%r15
+  20ede6:	00 
+  20ede7:	49 c1 e4 02          	shl    $0x2,%r12
+  20edeb:	4c 8d 34 85 04 00 00 	lea    0x4(,%rax,4),%r14
+  20edf2:	00 
+  20edf3:	4c 89 ee             	mov    %r13,%rsi
+  20edf6:	48 89 cf             	mov    %rcx,%rdi
+  20edf9:	4c 89 f2             	mov    %r14,%rdx
+  20edfc:	4d 01 fd             	add    %r15,%r13
+  20edff:	e8 fc bc e8 ff       	call   9ab00 <memcpy@plt>
+  20ee04:	48 89 c1             	mov    %rax,%rcx
+  20ee07:	4c 01 e1             	add    %r12,%rcx
+  20ee0a:	83 ed 01             	sub    $0x1,%ebp
+  20ee0d:	75 e4                	jne    20edf3 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xa63>
+  20ee0f:	e9 89 fc ff ff       	jmp    20ea9d <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x70d>
+  20ee14:	31 db                	xor    %ebx,%ebx
+  20ee16:	85 ff                	test   %edi,%edi
+  20ee18:	0f 8f 71 f6 ff ff    	jg     20e48f <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xff>
+  20ee1e:	e9 d4 f9 ff ff       	jmp    20e7f7 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x467>
+  20ee23:	66 0f ef d2          	pxor   %xmm2,%xmm2
+  20ee27:	48 c1 e2 04          	shl    $0x4,%rdx
+  20ee2b:	0f 28 da             	movaps %xmm2,%xmm3
+  20ee2e:	0f 28 e2             	movaps %xmm2,%xmm4
+  20ee31:	0f 28 ca             	movaps %xmm2,%xmm1
+  20ee34:	4c 01 d2             	add    %r10,%rdx
+  20ee37:	41 0f 10 02          	movups (%r10),%xmm0
+  20ee3b:	0f 10 6d 00          	movups 0x0(%rbp),%xmm5
+  20ee3f:	49 83 c2 10          	add    $0x10,%r10
+  20ee43:	48 01 c5             	add    %rax,%rbp
+  20ee46:	0f 28 f0             	movaps %xmm0,%xmm6
+  20ee49:	0f c6 f0 00          	shufps $0x0,%xmm0,%xmm6
+  20ee4d:	0f 59 f5             	mulps  %xmm5,%xmm6
+  20ee50:	0f 58 ce             	addps  %xmm6,%xmm1
+  20ee53:	0f 28 f0             	movaps %xmm0,%xmm6
+  20ee56:	0f c6 f0 55          	shufps $0x55,%xmm0,%xmm6
+  20ee5a:	0f 59 f5             	mulps  %xmm5,%xmm6
+  20ee5d:	0f 58 e6             	addps  %xmm6,%xmm4
+  20ee60:	0f 28 f0             	movaps %xmm0,%xmm6
+  20ee63:	0f c6 f0 aa          	shufps $0xaa,%xmm0,%xmm6
+  20ee67:	0f c6 c0 ff          	shufps $0xff,%xmm0,%xmm0
+  20ee6b:	0f 59 f5             	mulps  %xmm5,%xmm6
+  20ee6e:	0f 59 c5             	mulps  %xmm5,%xmm0
+  20ee71:	0f 58 de             	addps  %xmm6,%xmm3
+  20ee74:	0f 58 d0             	addps  %xmm0,%xmm2
+  20ee77:	49 39 d2             	cmp    %rdx,%r10
+  20ee7a:	75 bb                	jne    20ee37 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xaa7>
+  20ee7c:	48 89 0c 24          	mov    %rcx,(%rsp)
+  20ee80:	48 83 c3 20          	add    $0x20,%rbx
+  20ee84:	0f 29 4c 24 40       	movaps %xmm1,0x40(%rsp)
+  20ee89:	0f 29 5c 24 30       	movaps %xmm3,0x30(%rsp)
+  20ee8e:	0f 29 54 24 20       	movaps %xmm2,0x20(%rsp)
+  20ee93:	0f 29 64 24 10       	movaps %xmm4,0x10(%rsp)
+  20ee98:	48 8d 3d 01 cd 4e 00 	lea    0x4ecd01(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  20ee9f:	e8 4c d4 e8 ff       	call   9c2f0 <__tls_get_addr@plt>
+  20eea4:	48 8b 0c 24          	mov    (%rsp),%rcx
+  20eea8:	0f 28 64 24 10       	movaps 0x10(%rsp),%xmm4
+  20eead:	0f 28 54 24 20       	movaps 0x20(%rsp),%xmm2
+  20eeb2:	0f 28 5c 24 30       	movaps 0x30(%rsp),%xmm3
+  20eeb7:	0f 28 4c 24 40       	movaps 0x40(%rsp),%xmm1
+  20eebc:	48 89 c2             	mov    %rax,%rdx
+  20eebf:	41 8d 47 ff          	lea    -0x1(%r15),%eax
+  20eec3:	48 c1 e0 05          	shl    $0x5,%rax
+  20eec7:	48 01 d8             	add    %rbx,%rax
+  20eeca:	48 89 82 48 00 00 00 	mov    %rax,0x48(%rdx)
+  20eed1:	e9 ce f7 ff ff       	jmp    20e6a4 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x314>
+  20eed6:	66 0f ef c9          	pxor   %xmm1,%xmm1
+  20eeda:	48 c1 e0 04          	shl    $0x4,%rax
+  20eede:	0f 28 d1             	movaps %xmm1,%xmm2
+  20eee1:	0f 28 d9             	movaps %xmm1,%xmm3
+  20eee4:	0f 28 e1             	movaps %xmm1,%xmm4
+  20eee7:	4c 01 d0             	add    %r10,%rax
+  20eeea:	0f 28 e9             	movaps %xmm1,%xmm5
+  20eeed:	0f 28 f1             	movaps %xmm1,%xmm6
+  20eef0:	0f 28 f9             	movaps %xmm1,%xmm7
+  20eef3:	44 0f 28 c1          	movaps %xmm1,%xmm8
+  20eef7:	41 0f 10 02          	movups (%r10),%xmm0
+  20eefb:	44 0f 10 4d 00       	movups 0x0(%rbp),%xmm9
+  20ef00:	49 83 c2 10          	add    $0x10,%r10
+  20ef04:	44 0f 28 e0          	movaps %xmm0,%xmm12
+  20ef08:	45 0f 28 e9          	movaps %xmm9,%xmm13
+  20ef0c:	44 0f 28 d8          	movaps %xmm0,%xmm11
+  20ef10:	44 0f c6 e0 00       	shufps $0x0,%xmm0,%xmm12
+  20ef15:	45 0f 59 ec          	mulps  %xmm12,%xmm13
+  20ef19:	44 0f c6 d8 55       	shufps $0x55,%xmm0,%xmm11
+  20ef1e:	44 0f 28 d0          	movaps %xmm0,%xmm10
+  20ef22:	44 0f c6 d0 aa       	shufps $0xaa,%xmm0,%xmm10
+  20ef27:	0f c6 c0 ff          	shufps $0xff,%xmm0,%xmm0
+  20ef2b:	45 0f 58 c5          	addps  %xmm13,%xmm8
+  20ef2f:	45 0f 28 e9          	movaps %xmm9,%xmm13
+  20ef33:	45 0f 59 eb          	mulps  %xmm11,%xmm13
+  20ef37:	41 0f 58 f5          	addps  %xmm13,%xmm6
+  20ef3b:	45 0f 28 e9          	movaps %xmm9,%xmm13
+  20ef3f:	44 0f 59 c8          	mulps  %xmm0,%xmm9
+  20ef43:	45 0f 59 ea          	mulps  %xmm10,%xmm13
+  20ef47:	41 0f 58 d1          	addps  %xmm9,%xmm2
+  20ef4b:	44 0f 10 4d 10       	movups 0x10(%rbp),%xmm9
+  20ef50:	48 01 d5             	add    %rdx,%rbp
+  20ef53:	41 0f 58 e5          	addps  %xmm13,%xmm4
+  20ef57:	45 0f 59 e1          	mulps  %xmm9,%xmm12
+  20ef5b:	45 0f 59 d9          	mulps  %xmm9,%xmm11
+  20ef5f:	45 0f 59 d1          	mulps  %xmm9,%xmm10
+  20ef63:	44 0f 59 c8          	mulps  %xmm0,%xmm9
+  20ef67:	41 0f 58 fc          	addps  %xmm12,%xmm7
+  20ef6b:	41 0f 58 eb          	addps  %xmm11,%xmm5
+  20ef6f:	41 0f 58 da          	addps  %xmm10,%xmm3
+  20ef73:	41 0f 58 c9          	addps  %xmm9,%xmm1
+  20ef77:	49 39 c2             	cmp    %rax,%r10
+  20ef7a:	0f 85 77 ff ff ff    	jne    20eef7 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xb67>
+  20ef80:	48 89 0c 24          	mov    %rcx,(%rsp)
+  20ef84:	48 83 c3 40          	add    $0x40,%rbx
+  20ef88:	0f 29 94 24 90 00 00 	movaps %xmm2,0x90(%rsp)
+  20ef8f:	00 
+  20ef90:	0f 29 5c 24 70       	movaps %xmm3,0x70(%rsp)
+  20ef95:	0f 29 64 24 60       	movaps %xmm4,0x60(%rsp)
+  20ef9a:	0f 29 6c 24 50       	movaps %xmm5,0x50(%rsp)
+  20ef9f:	0f 29 7c 24 40       	movaps %xmm7,0x40(%rsp)
+  20efa4:	44 0f 29 44 24 30    	movaps %xmm8,0x30(%rsp)
+  20efaa:	0f 29 4c 24 20       	movaps %xmm1,0x20(%rsp)
+  20efaf:	0f 29 74 24 10       	movaps %xmm6,0x10(%rsp)
+  20efb4:	48 8d 3d e5 cb 4e 00 	lea    0x4ecbe5(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  20efbb:	e8 30 d3 e8 ff       	call   9c2f0 <__tls_get_addr@plt>
+  20efc0:	48 8b 0c 24          	mov    (%rsp),%rcx
+  20efc4:	0f 28 74 24 10       	movaps 0x10(%rsp),%xmm6
+  20efc9:	0f 28 4c 24 20       	movaps 0x20(%rsp),%xmm1
+  20efce:	44 0f 28 44 24 30    	movaps 0x30(%rsp),%xmm8
+  20efd4:	0f 28 7c 24 40       	movaps 0x40(%rsp),%xmm7
+  20efd9:	0f 28 6c 24 50       	movaps 0x50(%rsp),%xmm5
+  20efde:	0f 28 64 24 60       	movaps 0x60(%rsp),%xmm4
+  20efe3:	0f 28 5c 24 70       	movaps 0x70(%rsp),%xmm3
+  20efe8:	0f 28 94 24 90 00 00 	movaps 0x90(%rsp),%xmm2
+  20efef:	00 
+  20eff0:	48 89 c2             	mov    %rax,%rdx
+  20eff3:	41 8d 47 ff          	lea    -0x1(%r15),%eax
+  20eff7:	48 c1 e0 06          	shl    $0x6,%rax
+  20effb:	48 01 d8             	add    %rbx,%rax
+  20effe:	48 89 82 48 00 00 00 	mov    %rax,0x48(%rdx)
+  20f005:	e9 18 fd ff ff       	jmp    20ed22 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x992>
+  20f00a:	31 c0                	xor    %eax,%eax
+  20f00c:	e9 bc fb ff ff       	jmp    20ebcd <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x83d>
+  20f011:	48 c1 e2 20          	shl    $0x20,%rdx
+  20f015:	45 89 ed             	mov    %r13d,%r13d
+  20f018:	48 c1 e8 20          	shr    $0x20,%rax
+  20f01c:	49 09 d5             	or     %rdx,%r13
+  20f01f:	48 8b 54 24 08       	mov    0x8(%rsp),%rdx
+  20f024:	4c 89 2c 24          	mov    %r13,(%rsp)
+  20f028:	4c 21 f2             	and    %r14,%rdx
+  20f02b:	48 09 c2             	or     %rax,%rdx
+  20f02e:	66 0f 7e c0          	movd   %xmm0,%eax
+  20f032:	66 0f 6f c3          	movdqa %xmm3,%xmm0
+  20f036:	48 c1 e0 20          	shl    $0x20,%rax
+  20f03a:	89 d2                	mov    %edx,%edx
+  20f03c:	48 09 c2             	or     %rax,%rdx
+  20f03f:	48 89 54 24 08       	mov    %rdx,0x8(%rsp)
+  20f044:	e9 92 f7 ff ff       	jmp    20e7db <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x44b>
+  20f049:	66 0f ef d2          	pxor   %xmm2,%xmm2
+  20f04d:	0f 28 da             	movaps %xmm2,%xmm3
+  20f050:	0f 28 e2             	movaps %xmm2,%xmm4
+  20f053:	0f 28 ca             	movaps %xmm2,%xmm1
+  20f056:	e9 49 f6 ff ff       	jmp    20e6a4 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x314>
+  20f05b:	80 bc 24 8c 00 00 00 	cmpb   $0x0,0x8c(%rsp)
+  20f062:	00 
+  20f063:	74 3a                	je     20f09f <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xd0f>
+  20f065:	41 8d 44 24 ff       	lea    -0x1(%r12),%eax
+  20f06a:	89 04 24             	mov    %eax,(%rsp)
+  20f06d:	45 85 e4             	test   %r12d,%r12d
+  20f070:	0f 85 56 fd ff ff    	jne    20edcc <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xa3c>
+  20f076:	e9 2b fa ff ff       	jmp    20eaa6 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x716>
+  20f07b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+  20f080:	66 0f ef c9          	pxor   %xmm1,%xmm1
+  20f084:	0f 28 d1             	movaps %xmm1,%xmm2
+  20f087:	0f 28 d9             	movaps %xmm1,%xmm3
+  20f08a:	0f 28 e1             	movaps %xmm1,%xmm4
+  20f08d:	0f 28 e9             	movaps %xmm1,%xmm5
+  20f090:	0f 28 f1             	movaps %xmm1,%xmm6
+  20f093:	0f 28 f9             	movaps %xmm1,%xmm7
+  20f096:	44 0f 28 c1          	movaps %xmm1,%xmm8
+  20f09a:	e9 83 fc ff ff       	jmp    20ed22 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x992>
+  20f09f:	48 89 0c 24          	mov    %rcx,(%rsp)
+  20f0a3:	48 8d 3d f6 ca 4e 00 	lea    0x4ecaf6(%rip),%rdi        # 6fbba0 <_DYNAMIC+0x240>
+  20f0aa:	e8 41 d2 e8 ff       	call   9c2f0 <__tls_get_addr@plt>
+  20f0af:	0f b6 80 40 00 00 00 	movzbl 0x40(%rax),%eax
+  20f0b6:	45 85 e4             	test   %r12d,%r12d
+  20f0b9:	0f 84 e7 f9 ff ff    	je     20eaa6 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x716>
+  20f0bf:	84 c0                	test   %al,%al
+  20f0c1:	48 8b 0c 24          	mov    (%rsp),%rcx
+  20f0c5:	0f 85 44 f9 ff ff    	jne    20ea0f <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x67f>
+  20f0cb:	41 8d 44 24 ff       	lea    -0x1(%r12),%eax
+  20f0d0:	89 04 24             	mov    %eax,(%rsp)
+  20f0d3:	e9 37 fa ff ff       	jmp    20eb0f <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x77f>
+  20f0d8:	48 8d ac 24 b0 00 00 	lea    0xb0(%rsp),%rbp
+  20f0df:	00 
+  20f0e0:	48 8d 35 0d d0 38 00 	lea    0x38d00d(%rip),%rsi        # 59c0f4 <_fini+0x2b48>
+  20f0e7:	48 89 ef             	mov    %rbp,%rdi
+  20f0ea:	e8 71 99 ff ff       	call   208a60 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.0]>
+  20f0ef:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+  20f0f6:	00 
+  20f0f7:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+  20f0fe:	00 00 
+  20f100:	0f 85 c9 00 00 00    	jne    20f1cf <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xe3f>
+  20f106:	41 b8 d4 07 00 00    	mov    $0x7d4,%r8d
+  20f10c:	48 8d 0d b5 eb 39 00 	lea    0x39ebb5(%rip),%rcx        # 5adcc8 <typeinfo name for opencv_onnx::OperatorSetIdProto+0x6028>
+  20f113:	48 89 ee             	mov    %rbp,%rsi
+  20f116:	bf 29 ff ff ff       	mov    $0xffffff29,%edi
+  20f11b:	48 8d 15 de cf 38 00 	lea    0x38cfde(%rip),%rdx        # 59c100 <_fini+0x2b54>
+  20f122:	e8 69 d1 e8 ff       	call   9c290 <cv::error(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*, char const*, int)@plt>
+  20f127:	8b 44 24 10          	mov    0x10(%rsp),%eax
+  20f12b:	e9 87 f4 ff ff       	jmp    20e5b7 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x227>
+  20f130:	8b 44 24 20          	mov    0x20(%rsp),%eax
+  20f134:	e9 2f f8 ff ff       	jmp    20e968 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x5d8>
+  20f139:	48 8d ac 24 b0 00 00 	lea    0xb0(%rsp),%rbp
+  20f140:	00 
+  20f141:	48 8d 35 92 cf 38 00 	lea    0x38cf92(%rip),%rsi        # 59c0da <_fini+0x2b2e>
+  20f148:	48 89 ef             	mov    %rbp,%rdi
+  20f14b:	e8 10 99 ff ff       	call   208a60 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.0]>
+  20f150:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+  20f157:	00 
+  20f158:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+  20f15f:	00 00 
+  20f161:	75 6c                	jne    20f1cf <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xe3f>
+  20f163:	41 b8 a5 08 00 00    	mov    $0x8a5,%r8d
+  20f169:	48 8d 0d 58 eb 39 00 	lea    0x39eb58(%rip),%rcx        # 5adcc8 <typeinfo name for opencv_onnx::OperatorSetIdProto+0x6028>
+  20f170:	48 89 ee             	mov    %rbp,%rsi
+  20f173:	bf 29 ff ff ff       	mov    $0xffffff29,%edi
+  20f178:	48 8d 15 67 cf 38 00 	lea    0x38cf67(%rip),%rdx        # 59c0e6 <_fini+0x2b3a>
+  20f17f:	e8 0c d1 e8 ff       	call   9c290 <cv::error(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*, char const*, int)@plt>
+  20f184:	48 8d ac 24 b0 00 00 	lea    0xb0(%rsp),%rbp
+  20f18b:	00 
+  20f18c:	48 8d 35 61 cf 38 00 	lea    0x38cf61(%rip),%rsi        # 59c0f4 <_fini+0x2b48>
+  20f193:	48 89 ef             	mov    %rbp,%rdi
+  20f196:	e8 c5 98 ff ff       	call   208a60 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) [clone .isra.0]>
+  20f19b:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+  20f1a2:	00 
+  20f1a3:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+  20f1aa:	00 00 
+  20f1ac:	75 21                	jne    20f1cf <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xe3f>
+  20f1ae:	41 b8 09 08 00 00    	mov    $0x809,%r8d
+  20f1b4:	48 8d 0d 0d eb 39 00 	lea    0x39eb0d(%rip),%rcx        # 5adcc8 <typeinfo name for opencv_onnx::OperatorSetIdProto+0x6028>
+  20f1bb:	48 89 ee             	mov    %rbp,%rsi
+  20f1be:	bf 29 ff ff ff       	mov    $0xffffff29,%edi
+  20f1c3:	48 8d 15 43 cf 38 00 	lea    0x38cf43(%rip),%rdx        # 59c10d <_fini+0x2b61>
+  20f1ca:	e8 c1 d0 e8 ff       	call   9c290 <cv::error(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*, char const*, int)@plt>
+  20f1cf:	e8 6c c0 e8 ff       	call   9b240 <__stack_chk_fail@plt>
+  20f1d4:	44 89 f0             	mov    %r14d,%eax
+  20f1d7:	e9 f1 f9 ff ff       	jmp    20ebcd <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0x83d>
+  20f1dc:	48 8b 84 24 d8 00 00 	mov    0xd8(%rsp),%rax
+  20f1e3:	00 
+  20f1e4:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+  20f1eb:	00 00 
+  20f1ed:	75 e0                	jne    20f1cf <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int)+0xe3f>
+  20f1ef:	48 8d 3d 5a 95 39 00 	lea    0x39955a(%rip),%rdi        # 5a8750 <typeinfo name for opencv_onnx::OperatorSetIdProto+0xab0>
+  20f1f6:	e8 25 b1 e8 ff       	call   9a320 <std::__throw_length_error(char const*)@plt>
+  20f1fb:	f3 0f 1e fa          	endbr64
+  20f1ff:	48 89 c3             	mov    %rax,%rbx
+  20f202:	e9 4f 72 e9 ff       	jmp    a6456 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int) [clone .cold]>
+  20f207:	f3 0f 1e fa          	endbr64
+  20f20b:	48 89 c3             	mov    %rax,%rbx
+  20f20e:	e9 43 72 e9 ff       	jmp    a6456 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int) [clone .cold]>
+  20f213:	f3 0f 1e fa          	endbr64
+  20f217:	48 89 c3             	mov    %rax,%rbx
+  20f21a:	e9 37 72 e9 ff       	jmp    a6456 <cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int) [clone .cold]>
+  20f21f:	90                   	nop
+
