@@ -1,0 +1,258 @@
+XDIS 0000757362a09a7d:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09a84:  SSE 440F58F2                 addps xmm14, xmm2
+XDIS 0000757362a09a8c:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09a8f:  SSE 0F589424A0000000         addps xmm2, xmmword ptr [rsp+0xa0]
+XDIS 0000757362a09aa2:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09aa5:  SSE 0F589424B0000000         addps xmm2, xmmword ptr [rsp+0xb0]
+XDIS 0000757362a09ab8:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09abb:  SSE 0F589424C0000000         addps xmm2, xmmword ptr [rsp+0xc0]
+XDIS 0000757362a09ace:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09ad1:  SSE 0F589424D0000000         addps xmm2, xmmword ptr [rsp+0xd0]
+XDIS 0000757362a09ae7:  SSE 0F59CA                   mulps xmm1, xmm2
+XDIS 0000757362a09aea:  SSE 0F588C24E0000000         addps xmm1, xmmword ptr [rsp+0xe0]
+XDIS 0000757362a09b01:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b05:  SSE 440F58BC24F0000000       addps xmm15, xmmword ptr [rsp+0xf0]
+XDIS 0000757362a09b1b:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b1f:  SSE 440F58BC2400010000       addps xmm15, xmmword ptr [rsp+0x100]
+XDIS 0000757362a09b35:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b39:  SSE 440F587C2430             addps xmm15, xmmword ptr [rsp+0x30]
+XDIS 0000757362a09b49:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b4d:  SSE 440F587C2440             addps xmm15, xmmword ptr [rsp+0x40]
+XDIS 0000757362a09b5d:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b61:  SSE 0F59CA                   mulps xmm1, xmm2
+XDIS 0000757362a09b64:  SSE 440F587C2450             addps xmm15, xmmword ptr [rsp+0x50]
+XDIS 0000757362a09b6a:  SSE 0F584C2460               addps xmm1, xmmword ptr [rsp+0x60]
+XDIS 0000757362a09b85:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b8d:  SSE 440F587C2470             addps xmm15, xmmword ptr [rsp+0x70]
+XDIS 0000757362a09b93:  SSE 440F59E8                 mulps xmm13, xmm0
+XDIS 0000757362a09ba1:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09ba5:  SSE 440F58BC2480000000       addps xmm15, xmmword ptr [rsp+0x80]
+XDIS 0000757362a09bae:  SSE 440F59E0                 mulps xmm12, xmm0
+XDIS 0000757362a09bb2:  SSE 450F58CD                 addps xmm9, xmm13
+XDIS 0000757362a09bc3:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09bc7:  SSE 440F58BC2490000000       addps xmm15, xmmword ptr [rsp+0x90]
+XDIS 0000757362a09bd0:  SSE 0F59E8                   mulps xmm5, xmm0
+XDIS 0000757362a09bd3:  SSE 450F58C4                 addps xmm8, xmm12
+XDIS 0000757362a09bd7:  SSE 0F586C2410               addps xmm5, xmmword ptr [rsp+0x10]
+XDIS 0000757362a09be9:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09bf2:  SSE 0F59E0                   mulps xmm4, xmm0
+XDIS 0000757362a09bf5:  SSE 450F58DF                 addps xmm11, xmm15
+XDIS 0000757362a09bfd:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09c01:  SSE 0F58FC                   addps xmm7, xmm4
+XDIS 0000757362a09c04:  SSE 0F59CA                   mulps xmm1, xmm2
+XDIS 0000757362a09c07:  SSE 0F59D0                   mulps xmm2, xmm0
+XDIS 0000757362a09c0a:  SSE 0F580C24                 addps xmm1, xmmword ptr [rsp]
+XDIS 0000757362a09c0e:  SSE 0F59D8                   mulps xmm3, xmm0
+XDIS 0000757362a09c11:  SSE 0F585C2420               addps xmm3, xmmword ptr [rsp+0x20]
+XDIS 0000757362a09c16:  SSE 450F58D7                 addps xmm10, xmm15
+XDIS 0000757362a09c1e:  SSE 0F58F2                   addps xmm6, xmm2
+XDIS 0000757362a8d718:  SSE 0F59E8                   mulps xmm5, xmm0
+XDIS 0000757362a8d71b:  SSE 0F58CD                   addps xmm1, xmm5
+XDIS 0000757362a8d724:  SSE 0F59E8                   mulps xmm5, xmm0
+XDIS 0000757362a8d727:  SSE 0F58DD                   addps xmm3, xmm5
+XDIS 0000757362a8d72e:  SSE 0F59E8                   mulps xmm5, xmm0
+XDIS 0000757362a8d731:  SSE 410F590406               mulps xmm0, xmmword ptr [r14+rax*1]
+XDIS 0000757362a8d73a:  SSE 0F58E5                   addps xmm4, xmm5
+XDIS 0000757362a8d73d:  SSE 0F58D0                   addps xmm2, xmm0
+XDIS 0000757362a0e973:  SSE F30F595C8500             mulss xmm3, dword ptr [rbp+rax*4]
+XDIS 0000757362a0e981:  SSE F30F58C3                 addss xmm0, xmm3
+XDIS 0000757361b92897:  SSE 410F59D4                 mulps xmm2, xmm12
+XDIS 0000757361b9289b:  SSE 410F59CC                 mulps xmm1, xmm12
+XDIS 0000757361b928a6:  SSE 0F5CD0                   subps xmm2, xmm0
+XDIS 0000757361b928b0:  SSE 0F5CC8                   subps xmm1, xmm0
+XDIS 0000757361b928d0:  SSE 410F59D3                 mulps xmm2, xmm11
+XDIS 0000757361b928f1:  SSE 410F59CB                 mulps xmm1, xmm11
+XDIS 0000757361b929d2:  SSE 440F59FD                 mulps xmm15, xmm5
+XDIS 0000757361b92a1b:  SSE 0F58E8                   addps xmm5, xmm0
+XDIS 0000757361b92a1e:  SSE 0F58C1                   addps xmm0, xmm1
+XDIS 0000757361b92a21:  SSE 0F59E3                   mulps xmm4, xmm3
+XDIS 0000757361b92a24:  SSE 0F59EA                   mulps xmm5, xmm2
+XDIS 0000757361b92a27:  SSE 0F59C1                   mulps xmm0, xmm1
+XDIS 0000757361b92a2a:  SSE 0F58EF                   addps xmm5, xmm7
+XDIS 0000757361b92a2d:  SSE 0F58C7                   addps xmm0, xmm7
+XDIS 0000757361b92a30:  SSE 0F59EA                   mulps xmm5, xmm2
+XDIS 0000757361b92a33:  SSE 0F59C1                   mulps xmm0, xmm1
+XDIS 0000757361b92a36:  SSE 0F58EE                   addps xmm5, xmm6
+XDIS 0000757361b92a39:  SSE 0F58C6                   addps xmm0, xmm6
+XDIS 0000757361b92a3c:  SSE 0F59EA                   mulps xmm5, xmm2
+XDIS 0000757361b92a47:  SSE 0F59C1                   mulps xmm0, xmm1
+XDIS 0000757361b92a4e:  SSE 0F58EA                   addps xmm5, xmm2
+XDIS 0000757361b92a51:  SSE 0F58C2                   addps xmm0, xmm2
+XDIS 0000757361b92a54:  SSE 410F59EF                 mulps xmm5, xmm15
+XDIS 0000757361b92a58:  SSE 0F59C4                   mulps xmm0, xmm4
+XDIS 0000757362aaa394:  SSE F30F5CD1                 subss xmm2, xmm1
+XDIS 0000757362aaa398:  SSE F30F58CB                 addss xmm1, xmm3
+XDIS 0000757362aaa39c:  SSE F30F59CA                 mulss xmm1, xmm2
+XDIS 0000757362aaa3a0:  SSE F30F58C1                 addss xmm0, xmm1
+XDIS 0000757362aaa3b2:  SSE F30F59C8                 mulss xmm1, xmm0
+XDIS 0000757362aaa3b6:  SSE F30F584C2404             addss xmm1, dword ptr [rsp+0x4]
+ADDPS                                                          183699169
+ADDSD                                                                270
+ADDSS                                                            3519262
+DIVSD                                                                312
+DIVSS                                                                136
+HADDPS                                                              6894
+MULPD                                                                  1
+MULPS                                                          183579608
+MULSD                                                                933
+MULSS                                                            3324877
+SUBPS                                                             119538
+SUBSD                                                                282
+SUBSS                                                             477241
+VADDSD                                                               183
+VFMADD132SD                                                          307
+VFMADD213SD                                                           20
+VFMADD231SD                                                           33
+VFMSUB132SD                                                            5
+VFNMADD132SD                                                         202
+VFNMADD231SD                                                          91
+VMULSD                                                               181
+VSUBSD                                                               153
+ADDPS                                                          167645184
+ADDSS                                                              46112
+MULPS                                                          167091840
+ADDSS                                                            2032512
+MULSS                                                            2025504
+ADDPS                                                           14657786
+HADDPS                                                              6894
+MULPS                                                           14655488
+ADDPS                                                             162176
+ADDSS                                                               1376
+ADDSS                                                            1438580
+MULPS                                                             238512
+MULSS                                                             961556
+SUBSS                                                             477024
+ADDPS                                                             715536
+MULPS                                                             596280
+ADDPS                                                             477024
+MULPS                                                             834792
+SUBPS                                                             119256
+XDIS 0000757362a09a7d:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09a84:  SSE 440F58F2                 addps xmm14, xmm2
+XDIS 0000757362a09a8c:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09a8f:  SSE 0F589424A0000000         addps xmm2, xmmword ptr [rsp+0xa0]
+XDIS 0000757362a09aa2:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09aa5:  SSE 0F589424B0000000         addps xmm2, xmmword ptr [rsp+0xb0]
+XDIS 0000757362a09ab8:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09abb:  SSE 0F589424C0000000         addps xmm2, xmmword ptr [rsp+0xc0]
+XDIS 0000757362a09ace:  SSE 0F59D1                   mulps xmm2, xmm1
+XDIS 0000757362a09ad1:  SSE 0F589424D0000000         addps xmm2, xmmword ptr [rsp+0xd0]
+XDIS 0000757362a09ae7:  SSE 0F59CA                   mulps xmm1, xmm2
+XDIS 0000757362a09aea:  SSE 0F588C24E0000000         addps xmm1, xmmword ptr [rsp+0xe0]
+XDIS 0000757362a09b01:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b05:  SSE 440F58BC24F0000000       addps xmm15, xmmword ptr [rsp+0xf0]
+XDIS 0000757362a09b1b:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b1f:  SSE 440F58BC2400010000       addps xmm15, xmmword ptr [rsp+0x100]
+XDIS 0000757362a09b35:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b39:  SSE 440F587C2430             addps xmm15, xmmword ptr [rsp+0x30]
+XDIS 0000757362a09b49:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b4d:  SSE 440F587C2440             addps xmm15, xmmword ptr [rsp+0x40]
+XDIS 0000757362a09b5d:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b61:  SSE 0F59CA                   mulps xmm1, xmm2
+XDIS 0000757362a09b64:  SSE 440F587C2450             addps xmm15, xmmword ptr [rsp+0x50]
+XDIS 0000757362a09b6a:  SSE 0F584C2460               addps xmm1, xmmword ptr [rsp+0x60]
+XDIS 0000757362a09b85:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09b8d:  SSE 440F587C2470             addps xmm15, xmmword ptr [rsp+0x70]
+XDIS 0000757362a09b93:  SSE 440F59E8                 mulps xmm13, xmm0
+XDIS 0000757362a09ba1:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09ba5:  SSE 440F58BC2480000000       addps xmm15, xmmword ptr [rsp+0x80]
+XDIS 0000757362a09bae:  SSE 440F59E0                 mulps xmm12, xmm0
+XDIS 0000757362a09bb2:  SSE 450F58CD                 addps xmm9, xmm13
+XDIS 0000757362a09bc3:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09bc7:  SSE 440F58BC2490000000       addps xmm15, xmmword ptr [rsp+0x90]
+XDIS 0000757362a09bd0:  SSE 0F59E8                   mulps xmm5, xmm0
+XDIS 0000757362a09bd3:  SSE 450F58C4                 addps xmm8, xmm12
+XDIS 0000757362a09bd7:  SSE 0F586C2410               addps xmm5, xmmword ptr [rsp+0x10]
+XDIS 0000757362a09be9:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09bf2:  SSE 0F59E0                   mulps xmm4, xmm0
+XDIS 0000757362a09bf5:  SSE 450F58DF                 addps xmm11, xmm15
+XDIS 0000757362a09bfd:  SSE 440F59F9                 mulps xmm15, xmm1
+XDIS 0000757362a09c01:  SSE 0F58FC                   addps xmm7, xmm4
+XDIS 0000757362a09c04:  SSE 0F59CA                   mulps xmm1, xmm2
+XDIS 0000757362a09c07:  SSE 0F59D0                   mulps xmm2, xmm0
+XDIS 0000757362a09c0a:  SSE 0F580C24                 addps xmm1, xmmword ptr [rsp]
+XDIS 0000757362a09c0e:  SSE 0F59D8                   mulps xmm3, xmm0
+XDIS 0000757362a09c11:  SSE 0F585C2420               addps xmm3, xmmword ptr [rsp+0x20]
+XDIS 0000757362a09c16:  SSE 450F58D7                 addps xmm10, xmm15
+XDIS 0000757362a09c1e:  SSE 0F58F2                   addps xmm6, xmm2
+XDIS 0000757362a8d718:  SSE 0F59E8                   mulps xmm5, xmm0
+XDIS 0000757362a8d71b:  SSE 0F58CD                   addps xmm1, xmm5
+XDIS 0000757362a8d724:  SSE 0F59E8                   mulps xmm5, xmm0
+XDIS 0000757362a8d727:  SSE 0F58DD                   addps xmm3, xmm5
+XDIS 0000757362a8d72e:  SSE 0F59E8                   mulps xmm5, xmm0
+XDIS 0000757362a8d731:  SSE 410F590406               mulps xmm0, xmmword ptr [r14+rax*1]
+XDIS 0000757362a8d73a:  SSE 0F58E5                   addps xmm4, xmm5
+XDIS 0000757362a8d73d:  SSE 0F58D0                   addps xmm2, xmm0
+XDIS 0000757362a0e973:  SSE F30F595C8500             mulss xmm3, dword ptr [rbp+rax*4]
+XDIS 0000757362a0e981:  SSE F30F58C3                 addss xmm0, xmm3
+XDIS 0000757361b92897:  SSE 410F59D4                 mulps xmm2, xmm12
+XDIS 0000757361b9289b:  SSE 410F59CC                 mulps xmm1, xmm12
+XDIS 0000757361b928a6:  SSE 0F5CD0                   subps xmm2, xmm0
+XDIS 0000757361b928b0:  SSE 0F5CC8                   subps xmm1, xmm0
+XDIS 0000757361b928d0:  SSE 410F59D3                 mulps xmm2, xmm11
+XDIS 0000757361b928f1:  SSE 410F59CB                 mulps xmm1, xmm11
+XDIS 0000757361b929d2:  SSE 440F59FD                 mulps xmm15, xmm5
+XDIS 0000757361b92a1b:  SSE 0F58E8                   addps xmm5, xmm0
+XDIS 0000757361b92a1e:  SSE 0F58C1                   addps xmm0, xmm1
+XDIS 0000757361b92a21:  SSE 0F59E3                   mulps xmm4, xmm3
+XDIS 0000757361b92a24:  SSE 0F59EA                   mulps xmm5, xmm2
+XDIS 0000757361b92a27:  SSE 0F59C1                   mulps xmm0, xmm1
+XDIS 0000757361b92a2a:  SSE 0F58EF                   addps xmm5, xmm7
+XDIS 0000757361b92a2d:  SSE 0F58C7                   addps xmm0, xmm7
+XDIS 0000757361b92a30:  SSE 0F59EA                   mulps xmm5, xmm2
+XDIS 0000757361b92a33:  SSE 0F59C1                   mulps xmm0, xmm1
+XDIS 0000757361b92a36:  SSE 0F58EE                   addps xmm5, xmm6
+XDIS 0000757361b92a39:  SSE 0F58C6                   addps xmm0, xmm6
+XDIS 0000757361b92a3c:  SSE 0F59EA                   mulps xmm5, xmm2
+XDIS 0000757361b92a47:  SSE 0F59C1                   mulps xmm0, xmm1
+XDIS 0000757361b92a4e:  SSE 0F58EA                   addps xmm5, xmm2
+XDIS 0000757361b92a51:  SSE 0F58C2                   addps xmm0, xmm2
+XDIS 0000757361b92a54:  SSE 410F59EF                 mulps xmm5, xmm15
+XDIS 0000757361b92a58:  SSE 0F59C4                   mulps xmm0, xmm4
+XDIS 0000757362aaa394:  SSE F30F5CD1                 subss xmm2, xmm1
+XDIS 0000757362aaa398:  SSE F30F58CB                 addss xmm1, xmm3
+XDIS 0000757362aaa39c:  SSE F30F59CA                 mulss xmm1, xmm2
+XDIS 0000757362aaa3a0:  SSE F30F58C1                 addss xmm0, xmm1
+XDIS 0000757362aaa3b2:  SSE F30F59C8                 mulss xmm1, xmm0
+XDIS 0000757362aaa3b6:  SSE F30F584C2404             addss xmm1, dword ptr [rsp+0x4]
+ADDPS                                                          167645184
+ADDSS                                                              46112
+MULPS                                                          167091840
+ADDSS                                                            2032512
+MULSS                                                            2025504
+ADDPS                                                           14657786
+HADDPS                                                              6894
+MULPS                                                           14655488
+ADDPS                                                             162176
+ADDSS                                                               1376
+ADDSS                                                            1438580
+MULPS                                                             238512
+MULSS                                                             961556
+SUBSS                                                             477024
+ADDPS                                                             715536
+MULPS                                                             596280
+ADDPS                                                             477024
+MULPS                                                             834792
+SUBPS                                                             119256
+ADDPS                                                          183699169
+ADDSD                                                                270
+ADDSS                                                            3519262
+DIVSD                                                                312
+DIVSS                                                                136
+HADDPS                                                              6894
+MULPD                                                                  1
+MULPS                                                          183579608
+MULSD                                                                933
+MULSS                                                            3324877
+SUBPS                                                             119538
+SUBSD                                                                282
+SUBSS                                                             477241
+VADDSD                                                               183
+VFMADD132SD                                                          307
+VFMADD213SD                                                           20
+VFMADD231SD                                                           33
+VFMSUB132SD                                                            5
+VFNMADD132SD                                                         202
+VFNMADD231SD                                                          91
+VMULSD                                                               181
+VSUBSD                                                               153

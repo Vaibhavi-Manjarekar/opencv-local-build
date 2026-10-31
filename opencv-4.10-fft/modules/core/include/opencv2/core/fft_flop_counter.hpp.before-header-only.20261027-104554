@@ -1,0 +1,21 @@
+#ifndef OPENCV_CORE_FFT_FLOP_COUNTER_HPP
+#define OPENCV_CORE_FFT_FLOP_COUNTER_HPP
+
+#include <cstdint>
+
+namespace cv {
+namespace fft_flop_counter {
+
+void reset();
+void enable();
+void disable();
+
+void add(std::uint64_t count);
+
+std::uint64_t value();
+bool isEnabled();
+
+} // namespace fft_flop_counter
+} // namespace cv
+
+#endif

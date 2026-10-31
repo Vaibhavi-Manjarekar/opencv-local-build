@@ -1,0 +1,28 @@
+OpenCV version: 4.10.0
+Loading AlexNet...
+
+===== Convolution group information =====
+layer,input_channels,channels_per_group,groups,output_channels,kernel_h,kernel_w
+conv1,3,3,1,96,11,11
+conv2,96,48,2,256,5,5
+conv3,256,256,1,384,3,3
+conv4,384,192,2,384,3,3
+conv5,384,192,2,256,3,3
+=========================================
+
+===== OpenCV getFLOPS() =====
+
+Input shape: [1, 3, 227, 227]
+
+===== Manual literal counter =====
+actual_fft_manual N=1 C=3 K=96 groups=1 kernel=11x11 stride=4x4 fft_size=256x256 input_fft_flops=25165824 weight_precompute_flops=2415919104 remaining_runtime_flops=969174624 cold_total_flops=3410259552 steady_state_flops=994340448 transcendental_calls=3170304 comparisons=0
+actual_fft_manual N=1 C=96 K=256 groups=2 kernel=5x5 stride=1x1 fft_size=64x64 input_fft_flops=37748736 weight_precompute_flops=4831838208 remaining_runtime_flops=505600256 cold_total_flops=5375187200 steady_state_flops=543348992 transcendental_calls=19415040 comparisons=0
+actual_fft_manual N=1 C=256 K=384 groups=1 kernel=3x3 stride=1x1 fft_size=32x32 input_fft_flops=20971520 weight_precompute_flops=8053063680 remaining_runtime_flops=837614976 cold_total_flops=8911650176 steady_state_flops=858586496 transcendental_calls=63324160 comparisons=0
+actual_fft_manual N=1 C=384 K=384 groups=2 kernel=3x3 stride=1x1 fft_size=32x32 input_fft_flops=31457280 weight_precompute_flops=6039797760 remaining_runtime_flops=636288384 cold_total_flops=6707543424 steady_state_flops=667745664 transcendental_calls=47677440 comparisons=0
+actual_fft_manual N=1 C=384 K=256 groups=2 kernel=3x3 stride=1x1 fft_size=32x32 input_fft_flops=31457280 weight_precompute_flops=4026531840 remaining_runtime_flops=424192256 cold_total_flops=4482181376 steady_state_flops=455649536 transcendental_calls=31866880 comparisons=0
+==================================
+
+Forward pass completed.
+Output shape: [1, 1000]
+Output minimum: 0.000130176
+Output maximum: 0.00540535

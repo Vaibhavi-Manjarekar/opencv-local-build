@@ -1,0 +1,42 @@
+#include "precomp.hpp"
+#include <opencv2/core/fft_flop_counter.hpp>
+
+namespace cv {
+namespace fft_flop_counter {
+
+static thread_local std::uint64_t flopCount = 0;
+static thread_local bool enabled = false;
+
+void reset()
+{
+    flopCount = 0;
+}
+
+void enable()
+{
+    enabled = true;
+}
+
+void disable()
+{
+    enabled = false;
+}
+
+void add(std::uint64_t count)
+{
+    if (enabled)
+        flopCount += count;
+}
+
+std::uint64_t value()
+{
+    return flopCount;
+}
+
+bool isEnabled()
+{
+    return enabled;
+}
+
+} // namespace fft_flop_counter
+} // namespace cv

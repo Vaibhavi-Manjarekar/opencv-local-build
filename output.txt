@@ -1,0 +1,39 @@
+
+Actual trained-model inference
+------------------------------
+Input image: image.jpg
+Original image shape: (1598, 1600, 3)
+Network input shape: (1, 3, 227, 227)
+Network output shape: (1, 1000)
+
+Top predictions
+ 1.  30.03% n02127052 lynx, catamount
+ 2.  27.16% n02123159 tiger cat
+ 3.  24.26% n02124075 Egyptian cat
+ 4.  18.19% n02123045 tabby, tabby cat
+ 5.   0.29% n02123394 Persian cat
+
+Last three convolution stages
+-----------------------------
+layer      input_shape runtime_output_shape trained_weight_shape  Cin  Cout  groups  K_h  K_w  output_elements  dot_product_length  multiplications  total_additions     MACCs  FLOPs_2_per_MACC
+conv3 (1, 256, 13, 13)     (1, 384, 13, 13)     (384, 256, 3, 3)  256   384       1    3    3            64896                2304        149520384        149520384 149520384         299040768
+conv4 (1, 384, 13, 13)     (1, 384, 13, 13)     (384, 192, 3, 3)  384   384       2    3    3            64896                1728        112140288        112140288 112140288         224280576
+conv5 (1, 384, 13, 13)     (1, 256, 13, 13)     (256, 192, 3, 3)  384   256       2    3    3            43264                1728         74760192         74760192  74760192         149520384
+
+Totals for Conv3 + Conv4 + Conv5
+--------------------------------
+Multiplications: 336,420,864
+Additions:       336,420,864
+MACCs:           336,420,864
+FLOPs (2/MACC): 672,841,728
+
+Full-model measured latency
+---------------------------
+Runs:   100
+Mean:   10.694 ms
+Median: 10.749 ms
+Min:    8.998 ms
+Max:    13.868 ms
+Std:    0.836 ms
+
+Saved: alexnet_conv3_conv4_conv5_validation.csv

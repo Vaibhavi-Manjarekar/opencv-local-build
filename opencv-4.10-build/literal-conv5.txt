@@ -1,0 +1,19 @@
+[LITERAL_BEGIN] layer=conv5 input=1x384x13x13 weights=256x192x3x3 output=1x256x13x13
+[LITERAL_OPCOUNT] layer=conv5 real_mul=74760192 real_add=74760192 comparisons=299040768 total_arithmetic=149520384
+[LITERAL_BEGIN] layer=conv5 input=1x384x13x13 weights=256x192x3x3 output=1x256x13x13
+[LITERAL_OPCOUNT] layer=conv5 real_mul=74760192 real_add=74760192 comparisons=299040768 total_arithmetic=149520384
+Model loaded successfully.
+Number of labels: 1000
+Output layers: ('prob',)
+Original image shape: (1598, 1600, 3)
+Network input shape: (1, 3, 227, 227)
+Network output shape: (1, 1000)
+Inference latency: 215.370 ms
+Output appears to contain probabilities.
+
+Top-5 predictions:
+ 1. index=287  probability=0.300303 (30.03%) n02127052 lynx, catamount
+ 2. index=282  probability=0.271645 (27.16%) n02123159 tiger cat
+ 3. index=285  probability=0.242558 (24.26%) n02124075 Egyptian cat
+ 4. index=281  probability=0.181876 (18.19%) n02123045 tabby, tabby cat
+ 5. index=283  probability=0.002945 (0.29%) n02123394 Persian cat

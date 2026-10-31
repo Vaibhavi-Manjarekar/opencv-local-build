@@ -1,0 +1,94 @@
+--------------------------------------------------------------------------------
+Profile data file 'callgrind.alexnet.out' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 67990874
+Trigger: Program termination
+Profiled target:  ./build/test_alexnet_flops /home/vmanjarekar/CCG/caffe/models/bvlc_alexnet/deploy.prototxt /home/vmanjarekar/CCG/caffe/models/bvlc_alexnet/bvlc_alexnet.caffemodel (PID 33630, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                     
+--------------------------------------------------------------------------------
+1,026,856,208 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                      file:function
+--------------------------------------------------------------------------------
+1,026,856,208 (100.0%)  ???:0x000000000001f540 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+1,018,429,567 (99.18%)  ???:(below main) [/home/vmanjarekar/CCG/caffe/alexnet-flop-test/build/test_alexnet_flops]
+1,018,429,555 (99.18%)  ./csu/../csu/libc-start.c:__libc_start_main@@GLIBC_2.34 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,018,429,381 (99.18%)  ./csu/../sysdeps/nptl/libc_start_call_main.h:(below main) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,017,861,603 (99.12%)  ???:main [/home/vmanjarekar/CCG/caffe/alexnet-flop-test/build/test_alexnet_flops]
+  889,713,986 (86.64%)  ???:0x000000000010a3f0 [???]
+  889,713,984 (86.64%)  ???:cv::dnn::dnn4_v20240521::Net::forward(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  889,713,092 (86.64%)  ???:0x00000000048dcf00 [???]
+  889,711,950 (86.64%)  ???:cv::dnn::dnn4_v20240521::Net::Impl::forward(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  889,327,271 (86.61%)  ???:0x00000000048dd3d0 [???]
+  889,326,261 (86.61%)  ???:cv::dnn::dnn4_v20240521::Net::Impl::forwardToLayer(cv::dnn::dnn4_v20240521::detail::LayerData&, bool) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  889,324,947 (86.61%)  ???:cv::dnn::dnn4_v20240521::Net::Impl::forwardLayer(cv::dnn::dnn4_v20240521::detail::LayerData&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  879,815,282 (85.68%)  ???:0x00000000048dda80 [???]
+  879,814,159 (85.68%)  ???:cv::parallel_for_(cv::Range const&, cv::ParallelLoopBody const&, double) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_core.so.4.10.0]
+  789,870,181 (76.92%)  ???:cv::dnn::ConvolutionLayerImpl::forward(cv::_InputArray const&, cv::_OutputArray const&, cv::_OutputArray const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  780,495,804 (76.01%)  ???:cv::ParallelLoopBodyLambdaWrapper::operator()(cv::Range const&) const [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  769,162,675 (74.90%)  ???:cv::dnn::runFastConv(cv::_InputArray const&, cv::_OutputArray const&, cv::Ptr<cv::dnn::FastConv> const&, int, cv::Ptr<cv::dnn::dnn4_v20240521::ActivationLayer> const&, std::vector<float, std::allocator<float> > const&, bool) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  769,142,015 (74.90%)  ???:std::_Function_handler<void (cv::Range const&), cv::dnn::runFastConv(cv::_InputArray const&, cv::_OutputArray const&, cv::Ptr<cv::dnn::FastConv> const&, int, cv::Ptr<cv::dnn::dnn4_v20240521::ActivationLayer> const&, std::vector<float, std::allocator<float> > const&, bool)::{lambda(cv::Range const&)#2}>::_M_invoke(std::_Any_data const&, cv::Range const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  769,142,000 (74.90%)  ???:cv::dnn::runFastConv(cv::_InputArray const&, cv::_OutputArray const&, cv::Ptr<cv::dnn::FastConv> const&, int, cv::Ptr<cv::dnn::dnn4_v20240521::ActivationLayer> const&, std::vector<float, std::allocator<float> > const&, bool)::{lambda(cv::Range const&)#2}::operator()(cv::Range const&) const [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  747,933,936 (72.84%)  ???:cv::dnn::convBlock_F32(int, float const*, float const*, float*, int, bool, int, int, int) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  691,733,392 (67.36%)  ???:cv::dnn::convBlock4x24(int, float const*, float const*, float*, int, bool, int, int) [clone .constprop.0] [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  102,579,373 ( 9.99%)  ???:0x000000000010a490 [???]
+  102,579,371 ( 9.99%)  ???:cv::dnn::dnn4_v20240521::readNetFromCaffe(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+  100,423,068 ( 9.78%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   75,471,886 ( 7.35%)  ???:google::protobuf::internal::ParseContext::ParseMessage(google::protobuf::MessageLite*, char const*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   74,985,022 ( 7.30%)  ???:google::protobuf::internal::ParseContext::ParseMessage(google::protobuf::MessageLite*, char const*)'2 [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   73,422,580 ( 7.15%)  ???:cv::dnn::ReadNetParamsFromBinaryFileOrDie(char const*, opencv_caffe::NetParameter*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   73,313,473 ( 7.14%)  ???:cv::dnn::ReadProtoFromBinaryFile(char const*, google::protobuf::Message*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   73,271,219 ( 7.14%)  ???:google::protobuf::MessageLite::ParseFromCodedStream(google::protobuf::io::CodedInputStream*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   73,271,011 ( 7.14%)  ???:opencv_caffe::NetParameter::_InternalParse(char const*, google::protobuf::internal::ParseContext*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   73,234,687 ( 7.13%)  ???:opencv_caffe::V1LayerParameter::_InternalParse(char const*, google::protobuf::internal::ParseContext*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   73,162,636 ( 7.12%)  ???:opencv_caffe::BlobProto::_InternalParse(char const*, google::protobuf::internal::ParseContext*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   73,159,232 ( 7.12%)  ???:google::protobuf::internal::PackedFloatParser(void*, char const*, google::protobuf::internal::ParseContext*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   57,910,550 ( 5.64%)  ???:0x00000000048dbb10 [???]
+   55,224,767 ( 5.38%)  ???:cv::dnn::FullyConnectedLayerImpl::forward(cv::_InputArray const&, cv::_OutputArray const&, cv::_OutputArray const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   55,217,153 ( 5.38%)  ???:cv::dnn::FullyConnectedLayerImpl::FullyConnected::operator()(cv::Range const&) const [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   42,644,702 ( 4.15%)  ???:0x00000000048dd9c0 [???]
+   42,643,727 ( 4.15%)  ???:cv::Mat::copyTo(cv::_OutputArray const&) const [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_core.so.4.10.0]
+   34,513,397 ( 3.36%)  ???:cv::dnn::LRNLayerImpl::forward(cv::_InputArray const&, cv::_OutputArray const&, cv::_OutputArray const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   34,508,722 ( 3.36%)  ???:cv::dnn::LRNLayerImpl::ChannelLRN::operator()(cv::Range const&) const [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   33,897,926 ( 3.30%)  ???:google::protobuf::RepeatedField<float>::Reserve(int) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   21,921,009 ( 2.13%)  ???:cv::dnn::dnn4_v20240521::(anonymous namespace)::CaffeImporter::populateNet(cv::dnn::dnn4_v20240521::Net) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   21,069,936 ( 2.05%)  ???:cv::dnn::dnn4_v20240521::Net::Impl::getLayerInstance(cv::dnn::dnn4_v20240521::detail::LayerData&) const [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   21,034,636 ( 2.05%)  ???:0x000000000010a5d0 [???]
+   21,034,544 ( 2.05%)  ???:cv::dnn::dnn4_v20240521::Net::getLayer(int) const [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   21,033,624 ( 2.05%)  ???:0x00000000048da710 [???]
+   21,032,704 ( 2.05%)  ???:cv::dnn::dnn4_v20240521::Net::Impl::getLayer(int) const [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   21,023,488 ( 2.05%)  ???:0x00000000048dd990 [???]
+   21,022,086 ( 2.05%)  ???:cv::dnn::dnn4_v20240521::LayerFactory::createLayerInstance(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cv::dnn::dnn4_v20240521::LayerParams&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   20,696,857 ( 2.02%)  ???:cv::Ptr<cv::dnn::dnn4_v20240521::Layer> cv::dnn::dnn4_v20240521::details::_layerDynamicRegisterer<cv::dnn::dnn4_v20240521::InnerProductLayer>(cv::dnn::dnn4_v20240521::LayerParams&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   20,696,803 ( 2.02%)  ???:0x00000000048dd6f0 [???]
+   20,695,797 ( 2.02%)  ???:cv::dnn::dnn4_v20240521::InnerProductLayer::create(cv::dnn::dnn4_v20240521::LayerParams const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   20,694,481 ( 2.02%)  ???:cv::dnn::FullyConnectedLayerImpl::FullyConnectedLayerImpl(cv::dnn::dnn4_v20240521::LayerParams const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   20,693,116 ( 2.02%)  ???:cv::dnn::initFastConv(cv::_InputArray const&, float*, int, int, int, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, int, bool, bool) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   11,865,904 ( 1.16%)  ???:0x00000000048dc600 [???]
+   11,857,560 ( 1.15%)  ???:cv::hal::log32f(float const*, float*, int) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_core.so.4.10.0]
+   11,331,322 ( 1.10%)  ???:std::_Function_handler<void (cv::Range const&), cv::dnn::initFastConv(cv::_InputArray const&, float*, int, int, int, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> > const&, int, bool, bool)::{lambda(cv::Range const&)#3}>::_M_invoke(std::_Any_data const&, cv::Range const&) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   11,133,759 ( 1.08%)  ???:google::protobuf::ZeroCopyCodedInputStream::Next(void const**, int*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+   11,057,958 ( 1.08%)  ???:cv::hal::cpu_baseline::log32f(float const*, float*, int) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_core.so.4.10.0]
+   10,329,980 ( 1.01%)  ???:google::protobuf::io::CodedInputStream::GetDirectBufferPointer(void const**, int*) [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+    9,616,018 ( 0.94%)  ???:google::protobuf::io::CodedInputStream::Refresh() [/home/vmanjarekar/CCG/caffe/opencv-4.10/build/lib/libopencv_dnn.so.4.10.0]
+
+--------------------------------------------------------------------------------
+The following files chosen for auto-annotation could not be found:
+--------------------------------------------------------------------------------
+  ./csu/../csu/libc-start.c
+  ./csu/../sysdeps/nptl/libc_start_call_main.h
+  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+

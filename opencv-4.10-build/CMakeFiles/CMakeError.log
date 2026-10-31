@@ -1,0 +1,400 @@
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-Wnon-virtual-dtor’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type  -Wnon-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_1d1b2
+[1/2] /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type  -Wnon-virtual-dtor -o CMakeFiles/cmTC_1d1b2.dir/src.c.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-Wnon-virtual-dtor’ is valid for C++/ObjC++ but not for C
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+[2/2] : && /usr/bin/cc -O3 -DNDEBUG  CMakeFiles/cmTC_1d1b2.dir/src.c.o -o cmTC_1d1b2   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command-line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wmissing-prototypes'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_188f7
+[1/2] /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wmissing-prototypes -o CMakeFiles/cmTC_188f7.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+[2/2] : && /usr/bin/c++ -O3 -DNDEBUG  CMakeFiles/cmTC_188f7.dir/src.cxx.o -o cmTC_188f7   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command-line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wstrict-prototypes'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_e91ae
+[1/2] /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wstrict-prototypes -o CMakeFiles/cmTC_e91ae.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+[2/2] : && /usr/bin/c++ -O3 -DNDEBUG  CMakeFiles/cmTC_e91ae.dir/src.cxx.o -o cmTC_e91ae   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_083f2
+[1/2] /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo -o CMakeFiles/cmTC_083f2.dir/src.c.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+[2/2] : && /usr/bin/cc -O3 -DNDEBUG  CMakeFiles/cmTC_083f2.dir/src.c.o -o cmTC_083f2   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-Wsuggest-override’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wsuggest-override'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_fb5ff
+[1/2] /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wsuggest-override -o CMakeFiles/cmTC_fb5ff.dir/src.c.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-Wsuggest-override’ is valid for C++/ObjC++ but not for C
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+[2/2] : && /usr/bin/cc -O3 -DNDEBUG  CMakeFiles/cmTC_fb5ff.dir/src.c.o -o cmTC_fb5ff   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-delete-non-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_48a59
+[1/2] /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-delete-non-virtual-dtor -o CMakeFiles/cmTC_48a59.dir/src.c.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+[2/2] : && /usr/bin/cc -O3 -DNDEBUG  CMakeFiles/cmTC_48a59.dir/src.c.o -o cmTC_48a59   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_dd9da
+[1/2] /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_dd9da.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/c++ -O3 -DNDEBUG  CMakeFiles/cmTC_dd9da.dir/src.cxx.o -o cmTC_dd9da   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_84d4b
+[1/2] /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_84d4b.dir/src.c.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/cc -O3 -DNDEBUG  CMakeFiles/cmTC_84d4b.dir/src.c.o -o cmTC_84d4b   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command-line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -fvisibility-inlines-hidden'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_61f95
+[1/2] /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -fvisibility-inlines-hidden -o CMakeFiles/cmTC_61f95.dir/src.c.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command-line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+[2/2] : && /usr/bin/cc -O3 -DNDEBUG  CMakeFiles/cmTC_61f95.dir/src.c.o -o cmTC_61f95   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command[- ]line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command-line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-missing-prototypes'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_574c5
+[1/2] /usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-missing-declarations -Wno-unused-parameter  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-missing-prototypes -o CMakeFiles/cmTC_574c5.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command-line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+[2/2] : && /usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-missing-declarations -Wno-unused-parameter  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_574c5.dir/src.cxx.o -o cmTC_574c5   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: note: unrecognized command-line option ‘-Wno-implicit-const-int-float-conversion’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-implicit-const-int-float-conversion'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_1005e
+[1/2] /usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-implicit-const-int-float-conversion -o CMakeFiles/cmTC_1005e.dir/src.c.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: note: unrecognized command-line option ‘-Wno-implicit-const-int-float-conversion’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/cc -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_1005e.dir/src.c.o -o cmTC_1005e   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: note: unrecognized command-line option ‘-Wno-documentation’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-documentation'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_507ff
+[1/2] /usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-documentation -o CMakeFiles/cmTC_507ff.dir/src.c.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: note: unrecognized command-line option ‘-Wno-documentation’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/cc -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_507ff.dir/src.c.o -o cmTC_507ff   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: note: unrecognized command-line option ‘-Wno-null-pointer-subtraction’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-null-pointer-subtraction'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_9431c
+[1/2] /usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-undef -Wno-cast-align -Wno-implicit-fallthrough -Wno-unused-parameter -Wno-sign-compare -Wno-maybe-uninitialized  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-null-pointer-subtraction -o CMakeFiles/cmTC_9431c.dir/src.c.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1: note: unrecognized command-line option ‘-Wno-null-pointer-subtraction’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/cc -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-undef -Wno-cast-align -Wno-implicit-fallthrough -Wno-unused-parameter -Wno-sign-compare -Wno-maybe-uninitialized  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_9431c.dir/src.c.o -o cmTC_9431c   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-inconsistent-missing-override’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-inconsistent-missing-override'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_b56c7
+[1/2] /usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-inconsistent-missing-override -o CMakeFiles/cmTC_b56c7.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-inconsistent-missing-override’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_b56c7.dir/src.cxx.o -o cmTC_b56c7   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-implicit-const-int-float-conversion’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-implicit-const-int-float-conversion'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_b43a6
+[1/2] /usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override -Wno-implicit-fallthrough -Wno-tautological-compare -Wno-reorder -Wno-unused-result  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-implicit-const-int-float-conversion -o CMakeFiles/cmTC_b43a6.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-implicit-const-int-float-conversion’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wsign-promo -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations -Wno-misleading-indentation -Wno-deprecated -Wno-suggest-override -Wno-implicit-fallthrough -Wno-tautological-compare -Wno-reorder -Wno-unused-result  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_b43a6.dir/src.cxx.o -o cmTC_b43a6   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-tautological-undefined-compare’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-tautological-undefined-compare'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_6cdda
+[1/2] /usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-tautological-undefined-compare -o CMakeFiles/cmTC_6cdda.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-tautological-undefined-compare’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_6cdda.dir/src.cxx.o -o cmTC_6cdda   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-shorten-64-to-32’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_0f00e
+[1/2] /usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-shorten-64-to-32 -o CMakeFiles/cmTC_0f00e.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-shorten-64-to-32’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_0f00e.dir/src.cxx.o -o cmTC_0f00e   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-enum-compare-switch’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-enum-compare-switch'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_6f355
+[1/2] /usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-enum-compare-switch -o CMakeFiles/cmTC_6f355.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-enum-compare-switch’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_6f355.dir/src.cxx.o -o cmTC_6f355   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-comma’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-comma'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_230a8
+[1/2] /usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof -Wno-suggest-override -Wno-implicit-fallthrough -Wno-array-bounds -Wno-stringop-overflow -Wno-stringop-overread -Wno-extra-semi  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-comma -o CMakeFiles/cmTC_230a8.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-comma’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Winit-self -Wpointer-arith -Wuninitialized -Wno-delete-non-virtual-dtor -Wno-comment -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof -Wno-suggest-override -Wno-implicit-fallthrough -Wno-array-bounds -Wno-stringop-overflow -Wno-stringop-overread -Wno-extra-semi  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_230a8.dir/src.cxx.o -o cmTC_230a8   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: note: unrecognized command-line option ‘-Wno-unused-private-field’ may have been intended to silence earlier diagnostics'
+Compilation failed:
+    source file: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-unused-private-field'
+===== BUILD LOG =====
+Change Dir: '/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /usr/bin/ninja -v cmTC_70bb2
+[1/2] /usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-function -Wno-deprecated-declarations -Wno-overloaded-virtual  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-unused-private-field -o CMakeFiles/cmTC_70bb2.dir/src.cxx.o -c /home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx
+/home/vmanjarekar/CCG/caffe/opencv-4.10-build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+    1 | #pragma
+      | 
+cc1plus: note: unrecognized command-line option ‘-Wno-unused-private-field’ may have been intended to silence earlier diagnostics
+[2/2] : && /usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-function -Wno-deprecated-declarations -Wno-overloaded-virtual  -O3 -DNDEBUG  -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_70bb2.dir/src.cxx.o -o cmTC_70bb2   && :
+
+
+===== END =====
+

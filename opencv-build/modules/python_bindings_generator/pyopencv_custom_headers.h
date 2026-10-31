@@ -1,0 +1,12 @@
+//user-defined headers
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/core/misc/python/pyopencv_async.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/core/misc/python/pyopencv_core.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/core/misc/python/pyopencv_cuda.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/core/misc/python/pyopencv_umat.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/flann/misc/python/pyopencv_flann.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/videoio/misc/python/pyopencv_videoio.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/dnn/misc/python/pyopencv_dnn.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/features/misc/python/pyopencv_features.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/objdetect/misc/python/pyopencv_objdetect.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/stitching/misc/python/pyopencv_stitching.hpp"
+#include "/home/vmanjarekar/CCG/caffe/opencv/modules/video/misc/python/pyopencv_video.hpp"

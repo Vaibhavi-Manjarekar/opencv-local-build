@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/vmanjarekar/CCG/caffe/opencv-build/run-alexnet-inference.py", line 172, in <module>
+    main()
+  File "/home/vmanjarekar/CCG/caffe/opencv-build/run-alexnet-inference.py", line 68, in main
+    net = cv2.dnn.readNet(
+          ^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(5.1.0-dev) /home/vmanjarekar/CCG/caffe/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'
+

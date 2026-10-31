@@ -1,0 +1,3 @@
+/home/vmanjarekar/CCG/caffe/alexnet-flop-test/build-counted/CMakeFiles/test_alexnet_flops.dir
+/home/vmanjarekar/CCG/caffe/alexnet-flop-test/build-counted/CMakeFiles/edit_cache.dir
+/home/vmanjarekar/CCG/caffe/alexnet-flop-test/build-counted/CMakeFiles/rebuild_cache.dir

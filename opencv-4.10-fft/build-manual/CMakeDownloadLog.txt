@@ -1,0 +1,5 @@
+#use_cache "/home/vmanjarekar/CCG/caffe/opencv-4.10/.cache"
+#do_unpack "v0.1.2d.zip" "dbb095a8bf3008e91edbbf45d8d34885" "https://github.com/opencv/ade/archive/v0.1.2d.zip" "/home/vmanjarekar/CCG/caffe/opencv-4.10/build-manual/3rdparty/ade"
+#check_md5 "/home/vmanjarekar/CCG/caffe/opencv-4.10/.cache/ade/dbb095a8bf3008e91edbbf45d8d34885-v0.1.2d.zip"
+#mkdir "/home/vmanjarekar/CCG/caffe/opencv-4.10/build-manual/3rdparty/ade"
+#unpack "/home/vmanjarekar/CCG/caffe/opencv-4.10/build-manual/3rdparty/ade" "/home/vmanjarekar/CCG/caffe/opencv-4.10/.cache/ade/dbb095a8bf3008e91edbbf45d8d34885-v0.1.2d.zip"
