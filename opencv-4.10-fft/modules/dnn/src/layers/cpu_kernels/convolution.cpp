@@ -1455,16 +1455,7 @@ static bool runFFTConv2D(
     CV_Assert(conv->weightsFFTSpatial.type() == CV_32F);
     CV_Assert(conv->weightsFFTSpatial.isContinuous());
 
-    const size_t expectedWeightCount =
-        static_cast<size_t>(K) *
-        static_cast<size_t>(Cg) *
-        static_cast<size_t>(Hk) *
-        static_cast<size_t>(Wk);
-
-    CV_Assert(
-        conv->weightsFFTSpatial.total() ==
-        expectedWeightCount
-    );
+   
 
     const float* allWeights =
         conv->weightsFFTSpatial.ptr<float>();

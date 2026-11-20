@@ -449,31 +449,114 @@ static inline void countFFTFlops(std::uint64_t count)
 // Reference radix-2 implementation.
 template<typename T> struct DFT_R2
 {
-    void operator()(Complex<T>* dst, const int c_n, const int n, const int dw0, const Complex<T>* wave) const {
-        const int nx = n/2;
-        for(int i = 0 ; i < c_n; i += n)
+    static void logTotalFlops(
+        const char* phase,
+        int c_n,
+        int n,
+        std::uint64_t before,
+        std::uint64_t expected,
+        bool logging)
+    {
+        if (!logging)
+            return;
+
+        const std::uint64_t current =
+            cv::fft_flop_counter::value();
+
+        std::cerr
+            << "fft_r2"
+            << " phase=" << phase
+            << " c_n=" << c_n
+            << " n=" << n
+            << " total_flops=" << current;
+
+        if (phase[0] == 'a') // "after"
+        {
+            std::cerr
+                << " operator_flops=" << (current - before)
+                << " expected_operator_flops=" << expected;
+        }
+
+        std::cerr << '\n';
+    }
+
+    void operator()(
+        Complex<T>* dst,
+        const int c_n,
+        const int n,
+        const int dw0,
+        const Complex<T>* wave) const
+    {
+        CV_Assert(n >= 2 && n % 2 == 0);
+        CV_Assert(c_n >= 0 && c_n % n == 0);
+
+        const int nx = n / 2;
+
+        const bool logging =
+            cv::fft_flop_counter::isEnabled() &&
+            std::getenv("OPENCV_FFT_LOG_R2") != nullptr;
+
+        const std::uint64_t before =
+            cv::fft_flop_counter::value();
+
+        // Per block:
+        // j=0: unity-twiddle butterfly, 4 real FLOPs.
+        // j=1..nx-1: general butterflies, 10 real FLOPs each.
+        const std::uint64_t blocks =
+            static_cast<std::uint64_t>(c_n / n);
+
+        const std::uint64_t expected =
+            blocks *
+            (4ULL + 10ULL * static_cast<std::uint64_t>(nx - 1));
+
+        logTotalFlops(
+            "before", c_n, n, before, expected, logging);
+
+        for (int i = 0; i < c_n; i += n)
         {
             Complex<T>* v = dst + i;
+
+            // Unity twiddle: no complex multiplication.
             T r0 = v[0].re + v[nx].re;
             T i0 = v[0].im + v[nx].im;
             T r1 = v[0].re - v[nx].re;
             T i1 = v[0].im - v[nx].im;
-            v[0].re = r0; v[0].im = i0;
-            v[nx].re = r1; v[nx].im = i1;
+
+            v[0].re = r0;
+            v[0].im = i0;
+            v[nx].re = r1;
+            v[nx].im = i1;
+
             countFFTFlops(4);
 
-            for( int j = 1, dw = dw0; j < nx; j++, dw += dw0 )
+            for (int j = 1, dw = dw0;
+                 j < nx;
+                 ++j, dw += dw0)
             {
                 v = dst + i + j;
-                r1 = v[nx].re*wave[dw].re - v[nx].im*wave[dw].im;
-                i1 = v[nx].im*wave[dw].re + v[nx].re*wave[dw].im;
-                r0 = v[0].re; i0 = v[0].im;
 
-                v[0].re = r0 + r1; v[0].im = i0 + i1;
-                v[nx].re = r0 - r1; v[nx].im = i0 - i1;
+                // Compute W*b once: 6 real FLOPs.
+                r1 = v[nx].re * wave[dw].re
+                   - v[nx].im * wave[dw].im;
+
+                i1 = v[nx].im * wave[dw].re
+                   + v[nx].re * wave[dw].im;
+
+                r0 = v[0].re;
+                i0 = v[0].im;
+
+                // Reuse W*b for both outputs: 4 real FLOPs.
+                v[0].re = r0 + r1;
+                v[0].im = i0 + i1;
+                v[nx].re = r0 - r1;
+                v[nx].im = i0 - i1;
+
                 countFFTFlops(10);
             }
         }
+
+        logTotalFlops(
+            "after", c_n, n, before, expected, logging);
     }
 };
 
