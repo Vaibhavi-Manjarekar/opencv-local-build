@@ -1,53 +1,42 @@
 #include "precomp.hpp"
 #include <opencv2/core/fft_flop_counter.hpp>
-
 #include <atomic>
 
 namespace cv {
 namespace fft_flop_counter {
 
-static std::atomic<std::uint64_t> flopCount(0);
+static std::atomic<std::uint64_t> realMults(0);
+static std::atomic<std::uint64_t> realAdds(0);
 static std::atomic<bool> enabled(false);
 
 void reset()
 {
-    flopCount.store(0, std::memory_order_relaxed);
+    realMults.store(0, std::memory_order_relaxed);
+    realAdds.store(0, std::memory_order_relaxed);
 }
+void enable() { enabled.store(true, std::memory_order_relaxed); }
+void disable() { enabled.store(false, std::memory_order_relaxed); }
+bool isEnabled() { return enabled.load(std::memory_order_relaxed); }
 
-void enable()
+void addMults(std::uint64_t n)
 {
-    enabled.store(true, std::memory_order_relaxed);
+    if (isEnabled())
+        realMults.fetch_add(n, std::memory_order_relaxed);
 }
-
-void disable()
+void addAdds(std::uint64_t n)
 {
-    enabled.store(false, std::memory_order_relaxed);
+    if (isEnabled())
+        realAdds.fetch_add(n, std::memory_order_relaxed);
 }
-
-void add(std::uint64_t count)
+std::uint64_t mults()
 {
-    if (enabled.load(std::memory_order_relaxed))
-    {
-        flopCount.fetch_add(
-            count,
-            std::memory_order_relaxed
-        );
-    }
+    return realMults.load(std::memory_order_relaxed);
 }
-
-std::uint64_t value()
+std::uint64_t adds()
 {
-    return flopCount.load(
-        std::memory_order_relaxed
-    );
+    return realAdds.load(std::memory_order_relaxed);
 }
+std::uint64_t value() { return mults() + adds(); }
 
-bool isEnabled()
-{
-    return enabled.load(
-        std::memory_order_relaxed
-    );
 }
-
-} // namespace fft_flop_counter
-} // namespace cv
+}

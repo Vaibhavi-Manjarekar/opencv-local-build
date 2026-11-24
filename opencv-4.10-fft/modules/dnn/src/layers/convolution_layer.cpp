@@ -1335,6 +1335,8 @@ public:
             }
             else
             {
+                fastConvImpl->fftLayerName = name;
+
                 runFastConv(
                     inputs[0],
                     outputs[0],

@@ -42,17 +42,9 @@
 #include "precomp.hpp"
 #include <opencv2/core/fft_flop_counter.hpp>
 
-#define CV_FFT_COUNT_REAL_ADD(n) \
-    cv::fft_flop_counter::add(static_cast<std::uint64_t>(n))
 
-#define CV_FFT_COUNT_REAL_MUL(n) \
-    cv::fft_flop_counter::add(static_cast<std::uint64_t>(n))
 
-#define CV_FFT_COUNT_COMPLEX_ADD(n) \
-    cv::fft_flop_counter::add(2ULL * static_cast<std::uint64_t>(n))
 
-#define CV_FFT_COUNT_COMPLEX_MUL(n) \
-    cv::fft_flop_counter::add(6ULL * static_cast<std::uint64_t>(n))
 
 
 #include <iostream>
@@ -441,9 +433,11 @@ DFTInit( int n0, int nf, const int* factors, int* itab, int elem_size, void* _wa
 }
 
 
-static inline void countFFTFlops(std::uint64_t count)
+static inline void countFFTFlops(
+    std::uint64_t mults, std::uint64_t adds)
 {
-    cv::fft_flop_counter::add(count);
+    cv::fft_flop_counter::addMults(mults);
+    cv::fft_flop_counter::addAdds(adds);
 }
 
 // Reference radix-2 implementation.
@@ -527,7 +521,7 @@ template<typename T> struct DFT_R2
             v[nx].re = r1;
             v[nx].im = i1;
 
-            countFFTFlops(4);
+            countFFTFlops(0, 4);
 
             for (int j = 1, dw = dw0;
                  j < nx;
@@ -551,7 +545,7 @@ template<typename T> struct DFT_R2
                 v[nx].re = r0 - r1;
                 v[nx].im = i0 - i1;
 
-                countFFTFlops(10);
+                countFFTFlops(4, 6);
             }
         }
 
@@ -1148,7 +1142,7 @@ DFT(const OcvDftOptions & c, const Complex<T>* src, Complex<T>* dst)
                 v1[0].re = r0 - r1; v1[0].im = i0 - i1;
                 v0[nx].re = r2 + r3; v0[nx].im = i2 + i3;
                 v1[nx].re = r2 - r3; v1[nx].im = i2 - i3;
-                countFFTFlops(16);
+                countFFTFlops(0, 16);
 
                 for( j = 1, dw = dw0; j < nx; j++, dw += dw0 )
                 {
@@ -1173,7 +1167,7 @@ DFT(const OcvDftOptions & c, const Complex<T>* src, Complex<T>* dst)
                     v1[0].re = r0 - r1; v1[0].im = i0 - i1;
                     v0[nx].re = r2 + r3; v0[nx].im = i2 + i3;
                     v1[nx].re = r2 - r3; v1[nx].im = i2 - i3;
-                    countFFTFlops(34);
+                    countFFTFlops(12, 22);
                 }
             }
         }
@@ -1319,7 +1313,7 @@ DFT(const OcvDftOptions & c, const Complex<T>* src, Complex<T>* dst)
             T t1 = dst[i].im*im_scale;
             dst[i].re = t0;
             dst[i].im = t1;
-            countFFTFlops(2);
+            countFFTFlops(2, 0);
         }
     }
     else if( inv )
@@ -1410,7 +1404,7 @@ RealDFT(const OcvDftOptions & c, const T* src, T* dst)
         T t0, t;
         T h1_re, h1_im, h2_re, h2_im;
         T scale2 = scale*(T)0.5;
-        countFFTFlops(1);
+        countFFTFlops(1, 0);
         int n2 = n >> 1;
 
         c.factors[0] >>= 1;
@@ -1431,7 +1425,7 @@ RealDFT(const OcvDftOptions & c, const T* src, T* dst)
         t = dst[0] - dst[1];
         dst[0] = (dst[0] + dst[1])*scale;
         dst[1] = t*scale;
-        countFFTFlops(4);
+        countFFTFlops(2, 2);
 
         t0 = dst[n2];
         t = dst[n-1];
@@ -1459,14 +1453,14 @@ RealDFT(const OcvDftOptions & c, const T* src, T* dst)
             dst[n-j-1] = h1_re - h2_re;
             dst[j] = h1_im + h2_im;
             dst[n-j] = h2_im - h1_im;
-            countFFTFlops(18);
+            countFFTFlops(8, 10);
         }
 
         if( j <= n2 )
         {
             dst[n2-1] = t0*scale;
             dst[n2] = -t*scale;
-            countFFTFlops(2);
+            countFFTFlops(2, 0);
         }
     }
 
@@ -1571,7 +1565,7 @@ CCSIDFT(const OcvDftOptions & c, const T* src, T* dst)
         t1 = (src[n-1] - src[0]);
         dst[0] = t0;
         dst[1] = t1;
-        countFFTFlops(2);
+        countFFTFlops(0, 2);
 
         int n2 = (n+1) >> 1;
 
@@ -1594,7 +1588,7 @@ CCSIDFT(const OcvDftOptions & c, const T* src, T* dst)
             t1 = -h1_im - h2_re;
             t2 = h1_re + h2_im;
             t3 = h1_im - h2_re;
-            countFFTFlops(14);
+            countFFTFlops(4, 10);
 
             if( inplace )
             {
@@ -1619,7 +1613,7 @@ CCSIDFT(const OcvDftOptions & c, const T* src, T* dst)
         {
             t0 = t*2;
             t1 = src[n2]*2;
-            countFFTFlops(2);
+            countFFTFlops(2, 0);
 
             if( inplace )
             {

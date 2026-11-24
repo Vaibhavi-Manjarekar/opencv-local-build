@@ -1606,7 +1606,7 @@ static bool runFFTConv2D(
         );
     }
 
-    // Forward transforms of weights: cold/precompute cost.
+    // Forward transforms of weights: precompute cost.
     for (size_t index = 0;
          index < weightSpatial.size();
          ++index)
@@ -1704,12 +1704,21 @@ static bool runFFTConv2D(
                                 // Complex multiply:
                                 // four multiplies and two add/subtracts.
 
+                                // Complex multiplication: 6 real FLOPs.
+                                cv::fft_flop_counter::addMults(4);
+                                cv::fft_flop_counter::addAdds(2);
+
                                 sumRow[x][0] = real;
                                 sumRow[x][1] = imag;
                             }
                             else
                             {
                                 // Complex multiply plus complex add.
+
+                                // Complex multiplication + accumulation:
+                                // 6 + 2 = 8 real FLOPs.
+                                cv::fft_flop_counter::addMults(4);
+                                cv::fft_flop_counter::addAdds(4);
 
                                 sumRow[x][0] += real;
                                 sumRow[x][1] += imag;
@@ -1793,24 +1802,12 @@ static bool runFFTConv2D(
 
     cv::fft_flop_counter::disable();
 
-    const std::uint64_t executedFFTFlops =
-        cv::fft_flop_counter::value();
-
     std::cout
-        << "opencv_counted_fft"
-        << " N=" << N
-        << " C=" << C
-        << " K=" << K
-        << " groups=" << groups
-        << " kernel=" << Hk << "x" << Wk
-        << " stride="
-        << conv->stride_h << "x"
-        << conv->stride_w
-        << " fft_size="
-        << fftRows << "x" << fftCols
-        << " flops="
-        << executedFFTFlops
-        << std::endl;
+        << "layer=" << conv->fftLayerName
+        << " total_real_mults=" << cv::fft_flop_counter::mults()
+        << " total_real_adds=" << cv::fft_flop_counter::adds()
+        << " total_flops=" << cv::fft_flop_counter::value()
+        << '\n';
 
     return true;
 }

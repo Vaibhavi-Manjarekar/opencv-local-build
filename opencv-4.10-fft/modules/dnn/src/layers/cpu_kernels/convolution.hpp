@@ -50,6 +50,7 @@ namespace dnn {
 
 struct FastConv
 {
+    cv::String fftLayerName;
     int ngroups;
     int K, C, Hk, Wk, Dk;
     int stride_h, stride_w, stride_d;
